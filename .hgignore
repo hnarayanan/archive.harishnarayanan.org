@@ -1,0 +1,15 @@
+syntax: glob
+*~
+*.gif
+*.jpg
+*.png
+*.pdf
+*.zip
+*.ai
+*.ppt
+.htaccess
+*.pyc
+*.tmplc
+
+syntax: regexp
+.*\#.*\#$

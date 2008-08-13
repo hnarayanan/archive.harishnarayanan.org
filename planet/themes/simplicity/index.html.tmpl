@@ -1,0 +1,25 @@
+<!--#set var="pagetitle" value="Live, from Oslo!" --><!--#set var="includefeed" value="Yes" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
+<!--#set var="navigation" value="muJournal" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/navigator.html" -->
+              <div id="header">
+                <h1 id="title"><a href=""><!--#echo var="pagetitle" --></a></h1>
+              </div>
+
+              <div id="contents">
+                <TMPL_LOOP Items>
+		<TMPL_IF new_date>
+                <TMPL_UNLESS __FIRST__>
+                </div>
+                </TMPL_UNLESS>
+                <div class="daygroup">
+                  <h2><TMPL_VAR new_date></h2>
+                </TMPL_IF>
+                  <TMPL_IF title>
+                  <p class="muj-entry"><TMPL_VAR title>
+<br /><span class="timestamp"><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR date></a></span></p>
+                  </TMPL_IF>
+                  <TMPL_IF __LAST__>
+                </div>
+                </TMPL_IF>
+                </TMPL_LOOP>
+              </div>
+<!--#include virtual="$MY_DOCUMENT_ROOT/generic/footer.html" -->
