@@ -497,6 +497,8 @@ padding:.4em 1em;
 table.statistics td {
 padding-left:.8em;
 padding-right:.8em;
+padding-bottom:0.25em;
+padding-top:0.25em;
 }
 
 #top {
