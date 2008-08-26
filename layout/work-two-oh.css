@@ -19,7 +19,7 @@ width:auto;
 list-style:none;
 }
 
-#contents ol.presentations {
+#contents ol.decorated {
 line-height:130%;
 margin:1.5em auto;
 padding-right:1.5em;
@@ -27,7 +27,7 @@ padding-left:3em;
 width:46em;
 }
 
-#contents ol.presentations li {
+#contents ol.decorated li {
 background-color:#fafafa;
 border:solid 1px #bbb;
 margin-bottom:.8em;
@@ -36,7 +36,7 @@ padding:1em;
 -webkit-border-radius:0.6em;
 }
 
-#contents ol.presentations li img {
+#contents ol.decorated li img {
 float:right;
 padding-top:0;
 padding-bottom:1em;
