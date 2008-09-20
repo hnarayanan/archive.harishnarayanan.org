@@ -1,19 +1,13 @@
 syntax: glob
 *~
-*.avi
 *.gif
 *.jpg
 *.png
-*.pdf
-*.zip
-*.ai
-*.ppt
 .htaccess
 *.pyc
 *.tmplc
-*.gz
-*.bz2
 mujournal/*
+files/*
 
 syntax: regexp
 .*\#.*\#$
