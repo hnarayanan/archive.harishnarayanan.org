@@ -11,6 +11,9 @@ syntax: glob
 .htaccess
 *.pyc
 *.tmplc
+*.gz
+*.bz2
+mujournal/*
 
 syntax: regexp
 .*\#.*\#$
