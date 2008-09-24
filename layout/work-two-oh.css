@@ -133,6 +133,11 @@ font-size:100%;
 text-align:right;
 }
 
+#contents p.center {
+font-size:100%;
+text-align:center;
+}
+
 #contents p.muj-entry {
 width:80%;
 }
