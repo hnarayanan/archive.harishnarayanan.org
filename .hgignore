@@ -6,7 +6,7 @@ syntax: glob
 .htaccess
 *.pyc
 *.tmplc
-mujournal/*
+mujournal/index.html
 files/*
 
 syntax: regexp

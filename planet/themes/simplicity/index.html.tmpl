@@ -1,10 +1,12 @@
-<!--#set var="pagetitle" value="Live, from Oslo!" --><!--#set var="includefeed" value="Yes" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
+<!--#set var="pagetitle" value="Live, from Oslo!" --><!--#set var="includefeed" value="Yes" --><!--#set var="includefancy" value="Yes" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
 <!--#set var="navigation" value="muJournal" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/navigator.html" -->
               <div id="header">
                 <h1 id="title"><a href=""><!--#echo var="pagetitle" --></a></h1>
               </div>
 
               <div id="contents">
+                <div class="gallery">
+<!--#include virtual="gallery.html" -->                </div>
                 <TMPL_LOOP Items>
 		<TMPL_IF new_date>
                 <TMPL_UNLESS __FIRST__>
