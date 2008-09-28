@@ -9,6 +9,7 @@ syntax: glob
 mujournal/index.html
 mujournal/gallery.html
 files/*
+sandbox/*
 
 syntax: regexp
 .*\#.*\#$
