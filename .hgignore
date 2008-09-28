@@ -7,6 +7,7 @@ syntax: glob
 *.pyc
 *.tmplc
 mujournal/index.html
+mujournal/gallery.html
 files/*
 
 syntax: regexp

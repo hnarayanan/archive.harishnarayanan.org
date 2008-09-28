@@ -48,6 +48,6 @@ chosen = random.sample(possibilities,numberneeded);
 galleryfile = open (outputfile,'w');
 
 for imagenumber in chosen:
-    galleryfile.write('		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/photos/'+imagedata[imagenumber][0]+'"><img class="thumbnail-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/photos/'+imagedata[imagenumber][1]+'" alt="" /></a>\n');
+    galleryfile.write('		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/photos/'+imagedata[imagenumber][0]+'"><img class="thumbnail-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/photos/'+imagedata[imagenumber][1]+'" alt="Some recent moments!" /></a>\n');
 
 galleryfile.close();
