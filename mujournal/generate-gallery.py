@@ -6,11 +6,11 @@ numberneeded = 4;
 outputfile = 'gallery.html';
 
 imagedata = [
-('hiking08/20080713_0933.jpg', 'hiking08/thumbnails/20080713_0933.jpg'),
+#('hiking08/20080713_0933.jpg', 'hiking08/thumbnails/20080713_0933.jpg'),
 ('hiking08/20080713_0936.jpg', 'hiking08/thumbnails/20080713_0936.jpg'),
 ('hiking08/20080713_0939.jpg', 'hiking08/thumbnails/20080713_0939.jpg'),
 ('hiking08/20080713_0946.jpg', 'hiking08/thumbnails/20080713_0946.jpg'),
-('hiking08/20080713_0947.jpg', 'hiking08/thumbnails/20080713_0947.jpg'),
+#('hiking08/20080713_0947.jpg', 'hiking08/thumbnails/20080713_0947.jpg'),
 ('hiking08/20080713_0949.jpg', 'hiking08/thumbnails/20080713_0949.jpg'),
 ('hiking08/20080713_0954.jpg', 'hiking08/thumbnails/20080713_0954.jpg'),
 ('hiking08/20080713_0960.jpg', 'hiking08/thumbnails/20080713_0960.jpg'),
@@ -22,8 +22,8 @@ imagedata = [
 ('hiking08/20080713_0984.jpg', 'hiking08/thumbnails/20080713_0984.jpg'),
 ('hiking08/20080713_0985.jpg', 'hiking08/thumbnails/20080713_0985.jpg'),
 ('hiking08/20080713_0989.jpg', 'hiking08/thumbnails/20080713_0989.jpg'),
-('hiking08/20080713_0999.jpg', 'hiking08/thumbnails/20080713_0999.jpg'),
-('hiking08/20080713_1001.jpg', 'hiking08/thumbnails/20080713_1001.jpg'),
+#('hiking08/20080713_0999.jpg', 'hiking08/thumbnails/20080713_0999.jpg'),
+#('hiking08/20080713_1001.jpg', 'hiking08/thumbnails/20080713_1001.jpg'),
 ('hiking08/20080713_1003.jpg', 'hiking08/thumbnails/20080713_1003.jpg'),
 ('hiking08/20080713_1005.jpg', 'hiking08/thumbnails/20080713_1005.jpg'),
 ('hiking08/20080713_1010.jpg', 'hiking08/thumbnails/20080713_1010.jpg'),
@@ -40,6 +40,8 @@ imagedata = [
 ('asgardstrand08/20080923_1079.jpg', 'asgardstrand08/thumbnails/20080923_1079.jpg'),
 ('asgardstrand08/20080923_1091.jpg', 'asgardstrand08/thumbnails/20080923_1091.jpg'),
 ('asgardstrand08/20080923_1098.jpg', 'asgardstrand08/thumbnails/20080923_1098.jpg'),
+('frisbee08/20080705_0911.jpg', 'frisbee08/thumbnails/20080705_0911.jpg'),
+('frisbee08/20080705_0913.jpg', 'frisbee08/thumbnails/20080705_0913.jpg'),
 ];
 
 possibilities = range (0,len(imagedata),1);
