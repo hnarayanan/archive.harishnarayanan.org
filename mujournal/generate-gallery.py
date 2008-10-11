@@ -24,7 +24,7 @@ imagedata = [
 ('hiking08/20080713_0989.jpg', 'hiking08/thumbnails/20080713_0989.jpg'),
 #('hiking08/20080713_0999.jpg', 'hiking08/thumbnails/20080713_0999.jpg'),
 #('hiking08/20080713_1001.jpg', 'hiking08/thumbnails/20080713_1001.jpg'),
-('hiking08/20080713_1003.jpg', 'hiking08/thumbnails/20080713_1003.jpg'),
+#('hiking08/20080713_1003.jpg', 'hiking08/thumbnails/20080713_1003.jpg'),
 ('hiking08/20080713_1005.jpg', 'hiking08/thumbnails/20080713_1005.jpg'),
 ('hiking08/20080713_1010.jpg', 'hiking08/thumbnails/20080713_1010.jpg'),
 ('hiking08/20080713_1017.jpg', 'hiking08/thumbnails/20080713_1017.jpg'),

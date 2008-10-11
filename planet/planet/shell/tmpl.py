@@ -1,8 +1,8 @@
 from xml.sax.saxutils import escape
 import sgmllib, time, os, sys, new, urlparse, re
-from time import mktime, gmtime
 from planet import config, feedparser
 import htmltmpl
+from time import mktime, gmtime
 
 voids=feedparser._BaseHTMLProcessor.elements_no_end_tag
 empty=re.compile(r"<((%s)[^>]*)></\2>" % '|'.join(voids))
@@ -170,6 +170,9 @@ def tmpl_mapper(source, rules):
         for name,value in source.source.items():
             if name.startswith('planet_'):
                 output['channel_' + name[7:]] = String(value)
+            if not output.get('channel_name') and \
+                source.source.has_key('title_detail'):
+                output['channel_name'] = Plain(source.source.title_detail.value)
 
     return output
 

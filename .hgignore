@@ -8,6 +8,8 @@ syntax: glob
 *.tmplc
 mujournal/index.html
 mujournal/gallery.html
+planet/mujournal/identi.ca,*
+planet/mujournal/sources/identi.ca,*
 files/*
 sandbox/*
 
