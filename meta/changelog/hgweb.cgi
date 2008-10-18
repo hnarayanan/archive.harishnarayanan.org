@@ -23,6 +23,6 @@ from mercurial.hgweb.request import wsgiapplication
 import mercurial.hgweb.wsgicgi as wsgicgi
 
 def make_web_app():
-    return hgweb("/uio/rikke/simula-u44/harish/www_docs", "site")
+    return hgweb("/uio/rikke/simula-u35/harish/www_docs", "site")
 
 wsgicgi.launch(wsgiapplication(make_web_app))
