@@ -42,6 +42,9 @@ imagedata = [
 ('asgardstrand08/20080923_1098.jpg', 'asgardstrand08/thumbnails/20080923_1098.jpg'),
 ('frisbee08/20080705_0911.jpg', 'frisbee08/thumbnails/20080705_0911.jpg'),
 ('frisbee08/20080705_0913.jpg', 'frisbee08/thumbnails/20080705_0913.jpg'),
+('cbc08/20081107_1124.jpg', 'cbc08/thumbnails/20081107_1124.jpg'),
+('cbc08/20081107_1129.jpg', 'cbc08/thumbnails/20081107_1129.jpg'),
+('cbc08/20081107_1139.jpg', 'cbc08/thumbnails/20081107_1139.jpg'),
 ];
 
 possibilities = range (0,len(imagedata),1);
