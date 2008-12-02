@@ -19,7 +19,7 @@ imagedata = [
 ('hiking08/20080713_0972.jpg', 'hiking08/thumbnails/20080713_0972.jpg'),
 ('hiking08/20080713_0975.jpg', 'hiking08/thumbnails/20080713_0975.jpg'),
 ('hiking08/20080713_0978.jpg', 'hiking08/thumbnails/20080713_0978.jpg'),
-('hiking08/20080713_0984.jpg', 'hiking08/thumbnails/20080713_0984.jpg'),
+#('hiking08/20080713_0984.jpg', 'hiking08/thumbnails/20080713_0984.jpg'),
 ('hiking08/20080713_0985.jpg', 'hiking08/thumbnails/20080713_0985.jpg'),
 ('hiking08/20080713_0989.jpg', 'hiking08/thumbnails/20080713_0989.jpg'),
 #('hiking08/20080713_0999.jpg', 'hiking08/thumbnails/20080713_0999.jpg'),
@@ -45,6 +45,11 @@ imagedata = [
 ('cbc08/20081107_1124.jpg', 'cbc08/thumbnails/20081107_1124.jpg'),
 ('cbc08/20081107_1129.jpg', 'cbc08/thumbnails/20081107_1129.jpg'),
 ('cbc08/20081107_1139.jpg', 'cbc08/thumbnails/20081107_1139.jpg'),
+('mbp08/20081120_1171.jpg', 'mbp08/thumbnails/20081120_1171.jpg'),
+('mbp08/20081120_1183.jpg', 'mbp08/thumbnails/20081120_1183.jpg'),
+('mbp08/20081120_1184.jpg', 'mbp08/thumbnails/20081120_1184.jpg'),
+('mbp08/20081120_1185.jpg', 'mbp08/thumbnails/20081120_1185.jpg'),
+('mbp08/20081120_1188.jpg', 'mbp08/thumbnails/20081120_1188.jpg'),
 ];
 
 possibilities = range (0,len(imagedata),1);
