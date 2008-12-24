@@ -7,7 +7,7 @@ outputfile = 'gallery.html';
 
 imagedata = [
 #('hiking08/20080713_0933.jpg', 'hiking08/thumbnails/20080713_0933.jpg'),
-('hiking08/20080713_0936.jpg', 'hiking08/thumbnails/20080713_0936.jpg'),
+#('hiking08/20080713_0936.jpg', 'hiking08/thumbnails/20080713_0936.jpg'),
 ('hiking08/20080713_0939.jpg', 'hiking08/thumbnails/20080713_0939.jpg'),
 ('hiking08/20080713_0946.jpg', 'hiking08/thumbnails/20080713_0946.jpg'),
 #('hiking08/20080713_0947.jpg', 'hiking08/thumbnails/20080713_0947.jpg'),
@@ -38,7 +38,7 @@ imagedata = [
 ('asgardstrand08/20080923_1053.jpg', 'asgardstrand08/thumbnails/20080923_1053.jpg'),
 ('asgardstrand08/20080923_1062.jpg', 'asgardstrand08/thumbnails/20080923_1062.jpg'),
 ('asgardstrand08/20080923_1079.jpg', 'asgardstrand08/thumbnails/20080923_1079.jpg'),
-('asgardstrand08/20080923_1091.jpg', 'asgardstrand08/thumbnails/20080923_1091.jpg'),
+#('asgardstrand08/20080923_1091.jpg', 'asgardstrand08/thumbnails/20080923_1091.jpg'),
 ('asgardstrand08/20080923_1098.jpg', 'asgardstrand08/thumbnails/20080923_1098.jpg'),
 ('frisbee08/20080705_0911.jpg', 'frisbee08/thumbnails/20080705_0911.jpg'),
 ('frisbee08/20080705_0913.jpg', 'frisbee08/thumbnails/20080705_0913.jpg'),
