@@ -1,0 +1,34 @@
+digraph sitemap {
+	size="6,6";
+	node [color=lightgrey, style=filled];
+**	"About Me" -> "Contact ";
+	"About Me" -> "Vita";
+	"Research" -> "Grad School";
+	"Research" -> "Post Doc";
+	"Grad School" -> "Defect Formation";
+	"Grad School" -> "Continuum Physics";
+	"Continuum Physics" -> "Tissue Development";
+	"Continuum Physics" -> "Tissue Mechanics";
+	"Continuum Physics" -> "Tumour Growth";
+	"Grad School" -> "Shape Reconstruction";
+	"Grad School" -> "General Relativity";
+      	"Grad School" -> "Phase Transfer";
+	"Post Doc" -> "Numerical Analysis";
+	"Post Doc" -> "Software Components";
+	"Post Doc" -> "Fluid-Structure Interaction";
+	"Post Doc" ->  "Biomedical Applications";
+**	"Writing" -> "Academic";
+**	"Academic" -> "Peer Reviewed Articles"
+**	"Academic" -> "Other Works"
+**	"Writing" -> "Non Academic";
+**	"Non Academic" -> "Informative Pieces"
+**	"Non Academic" -> "Selected Journal Entries"
+**	"Talks";
+	"Leisure" -> "Galleries";
+**	"muJournal";
+	"Graduate School" -> "Coursework";
+	"Graduate School" -> "Teaching";
+**	"Meta" -> "Change Log";
+	"Meta" -> "Access Logs";
+**	"Meta" -> "Site source"
+}

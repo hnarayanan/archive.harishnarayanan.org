@@ -77,3 +77,9 @@ table.status td.broken
 	background: #ed1413;
 	text-align: center;
 }
+
+table.status td.wontfix
+{
+	background:transparent url(tr_bg.png) repeat top left;
+	text-align: center;
+}
