@@ -1,4 +1,4 @@
-<!--#set var="pagetitle" value="Research" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
+<!--#set var="pagetitle" value="Research" --><!--#set var="includejquery" value="Yes" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
 <!--#set var="navigation" value="Research" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/navigator.html" -->
               <div id="header">
 		<h1 id="title"><a href=""><!--#echo var="pagetitle" --></a></h1>
@@ -6,7 +6,7 @@
 
 	      <div id="contents">
 	        <p><em>You might want to come back later, after I&#8217;ve had the time to plan and implement this page. What follows is just an evolving skeleton.</em></p>
-		<p>Over the course of graduate school and my post-doctoral stint, I have had the opportunity to learn about and work on several topics in varying levels of detail. The following is a nearly-comprehensive chronological list.</p>
+<!--		<p>Over the course of graduate school and my post-doctoral stint, I have had the opportunity to learn about and work on several topics in varying levels of detail. The following is a nearly-comprehensive chronological list.</p>
 		<h2>grad school:</h2>
 		<ul>
 		  <li>defect-formation</li>
@@ -28,29 +28,47 @@
 		  <li>software-components</li>
 		  <li>fluid-structure-interaction</li>
 		  <li>biomedical-applications</li>
-		</ul>
-		<h2>From tensor calculus to tissue development (and more!)</h2>
-		<p>Imagine an abstract system composed of numerous species occupying a common region of space. Now, allow for these different species to interact with each other and their surroundings in a rich variety of ways&mdash;by the mutual application of forces, transforming into one another through chemical reactions, transferring energy amongst themselves...  to just about anything else you care to study.</p>
+		</ul> -->
+		<h2>My work in graduate school</h2>
+		<p>Imagine an abstract system composed of numerous species occupying a common region of space. Now, allow for these different species to interact with each other and their surroundings in a rich variety of ways&mdash;by the mutual application of forces, transforming into one another through chemical reactions, transferring energy amongst themselves&#8230; to just about anything else you care to study.</p>
 		<p>This is exactly what we have done, focusing our thought experiments on the materials and biophysical phenomena pertinent to the development of biological tissue. Drawing from the mathematics of continuum field theory, we have derived an abstract theoretical framework, general enough to encompass, systematically describe and study much of the biophysics underlying the growth of tissues.</p>
 		<p>But that's not where this story ends!</p>
 		<p>While abstract frameworks are all well and good for the soul, in order to arrive at something truly useful, we have proceeded to implement much of our theory into a general purpose computational framework&mdash;allowing us to solve a variety of interesting problems in applied science:</p>
-		<ul>
-		  <li>
-		    From studying simple porous media,<br />
-		    <em>Extra-cellular fluid flow in a constricted tissue.eps</em><br />
-		    <em>The swelling of a tissue with infusing fluid.eps</em>
-		  </li>
-		  <li>
-		    to examining the effects of mechanics on the growth of solid tumours,<br />
-		    <em>Heterogeneous traction due to a non-uniform distribution of cells.eps</em><br />
-		    <em>The growth of a solid tumour.eps</em>
-		  </li>
-		  <li>
-		    to understanding how phase transfer affects lithium iron phosphate batteries.<br />
-		    <em>The chemical potential due to a LiFePO4 finger.eps</em><br />
-		  </li>
-		</ul>
-		<img class="centered-photo" src="/~harish/files/images/research/continuum-physics/tissue-mechanics/constrict.gif" alt="Extra-cellular fluid flow in a constricted tissue." title="Extra-cellular fluid flow in a constricted tissue." />
+		<p>From treating tissue as simple porous media,</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/grad-school/continuum-physics/tissue-mechanics/constrict.gif" alt="Extra-cellular fluid flow in a constricted tissue." title="Extra-cellular fluid flow in a constricted tissue." />
 		<p class="caption">Extra-cellular fluid flow in a constricted tissue.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/grad-school/continuum-physics/tissue-mechanics/swelling.gif" alt="Tissue swelling under an influx of fluid." title="Tissue swelling under an influx of fluid." />
+		<p class="caption">Tissue swelling under an influx of fluid.</p>
+		<p>to examining the effects of mechanics on the growth of solid tumours,</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/grad-school/continuum-physics/tumour-growth/heterogeneous-traction.png" alt="Heterogeneous traction due to a non-uniform distribution of tumour cells." title="Heterogeneous traction due to a non-uniform distribution of tumour cells." />
+		<p class="caption">Heterogeneous traction due to a non-uniform distribution of tumour cells.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/grad-school/continuum-physics/tumour-growth/growing-tumour.gif" alt="The asymmetric growth of a constrained solid tumour." title="The asymmetric growth of a constrained solid tumour." />
+		<p class="caption">The asymmetric growth of a constrained solid tumour.</p>
+
+		<p>to understanding how phase transfer affects lithium iron phosphate batteries.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/grad-school/phase-transfer/chemical-potential.png" alt="The chemical potential and deformation due to a LiFePO4 finger." title="The chemical potential and deformation due to a LiFePO4 finger." />
+		<p class="caption">The chemical potential and deformation due to a LiFePO<sub>4</sub> finger.</p>
+		<p>The blocks below hold additional information and representative results.</p>
+		<div class="research-block">
+		  <h3>Defect formation</h3>
+		  <p>A small blurb and some images go here.</p>
+		  <h3>Continuum physics</h3>
+		  <p>A small blurb and some images go here.</p>
+		  <h3>Shape reconstruction</h3>
+		  <p>A small blurb and some images go here.</p>
+		  <h3>General relativity</h3>
+		  <p>A small blurb and some images go here.</p>
+		  <h3>Phase transfer</h3>
+		  <p>A small blurb and some images go here.</p>
+		</div>
+		<h2>My work as a post-doctoral fellow</h2>
+		<div class="research-block">
+		  <h3>Numerical analysis</h3>
+		  <p>A small blurb and some images go here.</p>
+		  <h3>Software components</h3>
+		  <p>A small blurb and some images go here.</p>
+		  <h3>Biomedical components</h3>
+		  <p>A small blurb and some images go here.</p>
+		</div>
 	      </div>
 <!--#include virtual="$MY_DOCUMENT_ROOT/generic/footer.html" -->
