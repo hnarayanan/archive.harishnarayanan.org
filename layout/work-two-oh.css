@@ -522,3 +522,34 @@ height: 0.1em;
 #top a{
 color: #ffffff;
 }
+
+.research-block {
+	    margin-left:auto;
+	    margin-right:auto;
+	    margin-top:1em;
+	    text-align:justify;
+	    width:45em;
+	    border-bottom: solid 1px #c4c4c4;
+}
+.research-block h3 {
+	    background: #e9e7e7 url(images/arrow-square.gif) no-repeat right -51px;
+	    padding: 7px 15px;
+	    margin: 0;
+	    border: solid 1px #c4c4c4;
+	    border-bottom: none;
+	    cursor: pointer;
+}
+.research-block h3:hover {
+	    background-color: #e3e2e2;
+}
+.research-block h3.active {
+	    background-position: right 5px;
+}
+.research-block p {
+	    background: #f7f7f7;
+	    margin: 0;
+	    padding: 10px 15px 20px;
+	    border-left: solid 1px #c4c4c4;
+	    border-right: solid 1px #c4c4c4;
+	    display: none;
+}

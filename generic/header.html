@@ -15,7 +15,7 @@
     <meta name="keywords" content="" />
     <meta name="distribution" content="global" />
     <meta name="revisit-after" content="1 days" />	
-    <meta name="copyright" content="All content (c) 2002--2008 Harish Narayanan" />
+    <meta name="copyright" content="All content (c) 2002--2009 Harish Narayanan" />
     <meta name="robots" content="follow, index, noarchive" />
 
     <title>Harish Narayanan, Ph.D. &#187; <!--#echo var="pagetitle" --></title>
@@ -40,12 +40,23 @@
         $("div.hideable").hide();
         $("a.showhide").click(function () {
         $("div.hideable").slideToggle(400);});
+
+      //$(".research-block h3").eq(2).addClass("active");
+      //$(".research-block p").eq(2).show();
+
+      $(".research-block h3").click(function(){
+      $(this).next("p").slideToggle("slow")
+      .siblings("p:visible").slideUp("slow");
+      $(this).toggleClass("active");
+      $(this).siblings("h3").removeClass("active");
+      });
+
       });
     </script>
 
 <!--#endif -->
 <!--#if expr="$includefeed = Yes" -->
-    <link rel="alternate" href="http://identi.ca/harish/all/rss" type="application/rss+xml" title="RSS feed for Harish's micro-journal" />
+    <link rel="alternate" href="http://identi.ca/harish/rss" type="application/rss+xml" title="RSS feed for Harish's micro-journal" />
 <!--#endif -->
     <link rel="stylesheet" type="text/css" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/print.css" media="print" />
     <link rel="shortcut icon" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/images/simula-icon.png" />
