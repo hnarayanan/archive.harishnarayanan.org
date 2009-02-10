@@ -83,3 +83,8 @@ table.status td.wontfix
 	background:transparent url(tr_bg.png) repeat top left;
 	text-align: center;
 }
+
+table.status a
+{
+	color: #ffffff;
+}
