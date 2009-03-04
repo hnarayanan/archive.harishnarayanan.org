@@ -50,6 +50,7 @@ imagedata = [
 ('mbp08/20081120_1184.jpg', 'mbp08/thumbnails/20081120_1184.jpg'),
 ('mbp08/20081120_1185.jpg', 'mbp08/thumbnails/20081120_1185.jpg'),
 ('mbp08/20081120_1188.jpg', 'mbp08/thumbnails/20081120_1188.jpg'),
+('art/word-list.png', 'art/thumbnails/word-list.png')
 ];
 
 possibilities = range (0,len(imagedata),1);
