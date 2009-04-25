@@ -2,7 +2,7 @@
 
 import random
 
-numberneeded = 4;
+numberneeded = 8;
 outputfile = 'gallery.html';
 
 imagedata = [
@@ -28,13 +28,13 @@ imagedata = [
 ('hiking08/20080713_1005.jpg', 'hiking08/thumbnails/20080713_1005.jpg'),
 ('hiking08/20080713_1010.jpg', 'hiking08/thumbnails/20080713_1010.jpg'),
 ('hiking08/20080713_1017.jpg', 'hiking08/thumbnails/20080713_1017.jpg'),
-('moments08/00.jpg', 'moments08/thumbnails/00.jpg'),
-('moments08/01.jpg', 'moments08/thumbnails/01.jpg'),
-('moments08/02.jpg', 'moments08/thumbnails/02.jpg'),
-('moments08/03.jpg', 'moments08/thumbnails/03.jpg'),
-('moments08/04.jpg', 'moments08/thumbnails/04.jpg'),
-('moments08/05.jpg', 'moments08/thumbnails/05.jpg'),
-('moments08/06.jpg', 'moments08/thumbnails/06.jpg'),
+('summer08/00.jpg', 'summer08/thumbnails/00.jpg'),
+('summer08/01.jpg', 'summer08/thumbnails/01.jpg'),
+('summer08/02.jpg', 'summer08/thumbnails/02.jpg'),
+('summer08/03.jpg', 'summer08/thumbnails/03.jpg'),
+('summer08/04.jpg', 'summer08/thumbnails/04.jpg'),
+('summer08/05.jpg', 'summer08/thumbnails/05.jpg'),
+('summer08/06.jpg', 'summer08/thumbnails/06.jpg'),
 ('asgardstrand08/20080923_1053.jpg', 'asgardstrand08/thumbnails/20080923_1053.jpg'),
 ('asgardstrand08/20080923_1062.jpg', 'asgardstrand08/thumbnails/20080923_1062.jpg'),
 ('asgardstrand08/20080923_1079.jpg', 'asgardstrand08/thumbnails/20080923_1079.jpg'),
