@@ -44,7 +44,6 @@ imagedata = [
 ('mbp08/20081120_1188.jpg', 'mbp08/thumbnails/20081120_1188.jpg'),
 ('art/word-list.png', 'art/thumbnails/word-list.png'),
 ('art/20090426_1468.jpg', 'art/thumbnails/20090426_1468.jpg'),
-('molly30/20090509_1484.jpg', 'molly30/thumbnails/20090509_1484.jpg'),
 ('molly30/20090509_1490.jpg', 'molly30/thumbnails/20090509_1490.jpg'),
 ('molly30/20090509_1504.jpg', 'molly30/thumbnails/20090509_1504.jpg'),
 ('molly30/20090509_1524.jpg', 'molly30/thumbnails/20090509_1524.jpg'),
@@ -52,7 +51,6 @@ imagedata = [
 ('molly30/20090509_1545.jpg', 'molly30/thumbnails/20090509_1545.jpg'),
 ('molly30/20090509_1546.jpg', 'molly30/thumbnails/20090509_1546.jpg'),
 ('molly30/20090509_1551.jpg', 'molly30/thumbnails/20090509_1551.jpg'),
-('molly30/20090509_1591.jpg', 'molly30/thumbnails/20090509_1591.jpg'),
 ('molly30/20090509_1655.jpg', 'molly30/thumbnails/20090509_1655.jpg'),
 ('molly30/20090509_1656.jpg', 'molly30/thumbnails/20090509_1656.jpg'),
 ('molly30/20090509_1658.jpg', 'molly30/thumbnails/20090509_1658.jpg'),
@@ -61,7 +59,7 @@ imagedata = [
 possibilities = range (0, len(imagedata), 1);
 chosen = random.sample(possibilities, numberneeded);
 
-galleryfile = open (outputfile,'w');
+galleryfile = open (outputfile, 'w');
 
 for imagenumber in chosen:
     galleryfile.write('		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/photos/' + imagedata[imagenumber][0]+'"><img class="thumbnail-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/photos/' + imagedata[imagenumber][1] + '" alt="Some recent moments!" /></a>\n');

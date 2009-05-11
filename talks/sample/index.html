@@ -1,0 +1,12 @@
+<!--#set var="pagetitle" value="A sample talk recorded at workshop" --><!--#set var="includeflowplayer" value="Yes" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
+<!--#set var="navigation" value="Sample talk" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/navigator.html" -->
+              <div id="header">
+		<h1 id="title"><a href=""><!--#echo var="pagetitle" --></a></h1>
+	      </div>
+
+	      <div id="contents">
+		<a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/files/video/workshop-talk-highres.flv" style="display:block; width: 480px;height: 360px; margin-left: auto; margin-right: auto; text-align: center;" id="player"></a>
+		<script>flowplayer("player", "<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/flash/flowplayer.swf");</script>
+
+	      </div>
+<!--#include virtual="$MY_DOCUMENT_ROOT/generic/footer.html" -->
