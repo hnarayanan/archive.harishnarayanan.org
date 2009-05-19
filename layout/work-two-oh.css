@@ -553,3 +553,12 @@ color: #ffffff;
 	    border-right: solid 1px #c4c4c4;
 	    display: none;
 }
+
+#player {
+display:block;
+width: 480px;
+height: 360px;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
