@@ -68,6 +68,22 @@ imagedata = [
 ('agwedding/20090707_2874.jpg', 'agwedding/thumbnails/20090707_2874.jpg'),
 ('agwedding/20090707_2885.jpg', 'agwedding/thumbnails/20090707_2885.jpg'),
 ('agwedding/20090707_2886.jpg', 'agwedding/thumbnails/20090707_2886.jpg'),
+('smogen09/20090817_3031.jpg', 'smogen09/thumbnails/20090817_3031.jpg'),
+('smogen09/20090817_3001.jpg', 'smogen09/thumbnails/20090817_3001.jpg'),
+('smogen09/20090817_3015.jpg', 'smogen09/thumbnails/20090817_3015.jpg'),
+('smogen09/20090817_3003.jpg', 'smogen09/thumbnails/20090817_3003.jpg'),
+('smogen09/20090817_2905.jpg', 'smogen09/thumbnails/20090817_2905.jpg'),
+('smogen09/20090817_2958.jpg', 'smogen09/thumbnails/20090817_2958.jpg'),
+('smogen09/20090817_2920.jpg', 'smogen09/thumbnails/20090817_2920.jpg'),
+('smogen09/20090817_2964.jpg', 'smogen09/thumbnails/20090817_2964.jpg'),
+('smogen09/20090817_2991.jpg', 'smogen09/thumbnails/20090817_2991.jpg'),
+('smogen09/20090817_3043.jpg', 'smogen09/thumbnails/20090817_3043.jpg'),
+('smogen09/20090817_3036.jpg', 'smogen09/thumbnails/20090817_3036.jpg'),
+('smogen09/20090817_3056.jpg', 'smogen09/thumbnails/20090817_3056.jpg'),
+('smogen09/20090817_3063.jpg', 'smogen09/thumbnails/20090817_3063.jpg'),
+('smogen09/20090817_2892.jpg', 'smogen09/thumbnails/20090817_2892.jpg'),
+('smogen09/20090817_2895.jpg', 'smogen09/thumbnails/20090817_2895.jpg'),
+('smogen09/20090817_3058.jpg', 'smogen09/thumbnails/20090817_3058.jpg'),
 ];
 
 possibilities = range (0, len(imagedata), 1);
