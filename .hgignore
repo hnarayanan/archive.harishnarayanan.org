@@ -12,6 +12,7 @@ planet/mujournal/identi.ca,*
 planet/mujournal/sources/identi.ca,*
 files/*
 sandbox/flowplayer/*
+*.orig
 
 syntax: regexp
 .*\#.*\#$
