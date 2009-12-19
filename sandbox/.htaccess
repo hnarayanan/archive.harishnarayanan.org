@@ -1,0 +1,4 @@
+Options -Indexes +FollowSymLinks
+
+AddType text/html .html
+AddHandler server-parsed .html

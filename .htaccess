@@ -1,0 +1,15 @@
+Options -Indexes +FollowSymLinks
+
+AddType application/xhtml+xml;q=0.8 .html
+AddHandler server-parsed .html
+RewriteEngine on
+RewriteCond %{HTTP_USER_AGENT} ((.*MSIE.*)|(Lynx.*))
+RewriteCond %{REQUEST_URI} \.html$
+RewriteRule .* - [T=text/html]
+
+SetEnv MY_DOCUMENT_ROOT /~harish
+
+ErrorDocument 404 "I was once a delicious page. A little too delicious."
+ErrorDocument 403 "Here be dragons. Rawr!"
+
+RewriteRule ^cv.pdf$ /~harish/files/cv/cv.pdf [NC,QSA,L]

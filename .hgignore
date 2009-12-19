@@ -3,7 +3,6 @@ syntax: glob
 *.gif
 *.jpg
 *.png
-.htaccess
 *.pyc
 *.tmplc
 mujournal/index.html
