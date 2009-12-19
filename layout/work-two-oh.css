@@ -412,6 +412,48 @@ margin:.16em;
 padding:2px;
 }
 
+div.research-gallery {
+margin-left:auto;
+margin-right: auto;
+width:591px;
+display: block;
+}
+
+div.research-question {
+background: #fafafa;
+border: solid 1px #ddd;
+height:200px;
+width: 190px;
+margin-left: 5px;
+margin-bottom: 5px;
+float:left;
+}
+
+img.research-image {
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 10px;
+}
+
+.research-description a {
+margin-top: 10px;
+margin-left: 10px;
+font-size: 90%;
+width: 100px;
+float: left;
+font-weight: 900;
+}
+
+.research-meta {
+text-align:right;
+font-size: 50%;
+width: 70px;
+margin-top: 10px;
+margin-right:10px;
+float: left;
+color: #bbb;
+}
+
 div.showcase {
 background-color:#fafafa;
 border:solid 1px #bbb;
