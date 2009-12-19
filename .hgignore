@@ -1,8 +1,5 @@
 syntax: glob
 *~
-*.gif
-*.jpg
-*.png
 *.pyc
 *.tmplc
 mujournal/index.html
