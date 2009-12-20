@@ -412,14 +412,14 @@ margin:.16em;
 padding:2px;
 }
 
-div.research-gallery {
+div.decorated-gallery {
 margin-left:auto;
 margin-right: auto;
 width:591px;
 display: block;
 }
 
-div.research-question {
+div.gallery-item {
 background: #fafafa;
 border: solid 1px #ddd;
 height:200px;
@@ -429,13 +429,13 @@ margin-bottom: 5px;
 float:left;
 }
 
-img.research-image {
+img.gallery-item-image {
 margin-left: 10px;
 margin-right: 10px;
 margin-top: 10px;
 }
 
-.research-description a {
+.gallery-item-description a {
 margin-top: 10px;
 margin-left: 10px;
 font-size: 90%;
@@ -444,7 +444,7 @@ float: left;
 font-weight: 900;
 }
 
-.research-meta {
+.gallery-item-meta {
 text-align:right;
 font-size: 50%;
 width: 70px;
