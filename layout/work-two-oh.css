@@ -435,7 +435,7 @@ margin-right: 10px;
 margin-top: 10px;
 }
 
-.gallery-item-description a {
+.gallery-item-description a, .gallery-item-photo-description a {
 margin-top: 10px;
 margin-left: 10px;
 font-size: 90%;
@@ -444,7 +444,11 @@ float: left;
 font-weight: 900;
 }
 
-.gallery-item-meta {
+.gallery-item-photo-description a {
+width: 140px;
+}
+
+.gallery-item-meta, .gallery-item-photo-meta {
 text-align:right;
 font-size: 50%;
 width: 70px;
@@ -452,6 +456,10 @@ margin-top: 10px;
 margin-right:10px;
 float: left;
 color: #bbb;
+}
+
+.gallery-item-photo-meta {
+width: 30px;
 }
 
 div.showcase {
