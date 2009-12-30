@@ -7,7 +7,7 @@ RewriteCond %{HTTP_USER_AGENT} ((.*MSIE.*)|(Lynx.*))
 RewriteCond %{REQUEST_URI} \.html$
 RewriteRule .* - [T=text/html]
 
-SetEnv MY_DOCUMENT_ROOT /~harish
+SetEnv MY_DOCUMENT_ROOT
 
 ErrorDocument 404 "I was once a delicious page. A little too delicious."
 ErrorDocument 403 "Here be dragons. Rawr!"
