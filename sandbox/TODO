@@ -2,14 +2,6 @@
 ** Make contact information more prominent
 * Complete research pages
 ** Add 'Research Fish' image
-* Add more articles to the 'Writing' page
-** Update work-related content to match Simula page
-** Informative pieces
-*** Grad school FAQ
-*** Maxtor hard drive in GNU/Linux
-** Diary entries
-*** Harmonising whisteblowing
-*** Trawl through journal for more interesting articles
 * Align 'Talks' page with Simula listing
 * Clean up and populate 'Art' page
 ** Fix CSS for FancyZoom
@@ -20,3 +12,14 @@
 - Add some sort of breadcrumb navigation for complex pages.
 - Add two more galleries to moments
 - Complete at least one research page to figure out breadcrumbing
+
+Writing page
+1. Add a preprint for the paper "Experimental and computational investigation of viscoelasticity of native and engineered ligament and tendon."
+2. Remove numbering for Ph.D. thesis "list."
+3. Add more articles to the 'Writing' page
+   3.1 Update work-related content to match Simula page
+   3.2 Informative pieces
+        i. Grad school FAQ
+       ii. Maxtor hard drive in GNU/Linux
+    3.3 Diary entries
+        i. Harmonising whisteblowing
