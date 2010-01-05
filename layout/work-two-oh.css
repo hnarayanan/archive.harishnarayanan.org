@@ -612,3 +612,15 @@ margin-left: auto;
 margin-right: auto;
 text-align: center;
 }
+
+#corner-banner {
+background: url("images/corner-banner.png") no-repeat;
+display: block;
+height: 216px;
+width: 216px;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 999;
+text-decoration: none;
+}
