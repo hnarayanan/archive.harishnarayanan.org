@@ -632,3 +632,23 @@ margin-left:auto;
 margin-right:auto;
 text-align: center;
 }
+
+small, sub, sup {
+font-size: 83%;
+}
+
+sub, sup {
+height: 0;
+line-height: 1;
+vertical-align: baseline;
+_vertical-align: bottom;
+position: relative;
+}
+
+sup {
+bottom: 1ex;
+}
+
+sub {
+top: .5ex;
+}
