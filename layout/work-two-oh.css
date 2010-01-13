@@ -653,6 +653,7 @@ sub {
 top: .5ex;
 }
 
-span.strike {
+span.outdated {
 text-decoration: line-through;
+color:#bbb;
 }
