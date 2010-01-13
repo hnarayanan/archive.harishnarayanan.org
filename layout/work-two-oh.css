@@ -652,3 +652,7 @@ bottom: 1ex;
 sub {
 top: .5ex;
 }
+
+span.strike {
+text-decoration: line-through;
+}
