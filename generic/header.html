@@ -52,6 +52,11 @@
     <script type="text/javascript" src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/flowplayer.controls.js"></script>
     <link rel="stylesheet" type="text/css" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/flowplayer-controls.css"/>
 <!--#endif -->
+<!--#if expr="$includesyntaxhighlighter = Yes" -->
+    <script type="text/javascript" src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/sh_main.js"></script>
+    <script type="text/javascript" src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/sh_python.js"></script>
+    <link type="text/css" rel="stylesheet" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/sh_ide-codewarrior.css" />
+<!--#endif -->
     <link rel="stylesheet" type="text/css" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/print.css" media="print" />
     <link rel="shortcut icon" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/images/simula-icon.png" />
     <link rel="icon" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/images/simula-icon.png" />
@@ -59,7 +64,7 @@
 
   </head>
 
-  <body<!--#if expr="$includefancy = Yes" --> onload="setupZoom()"<!--#endif -->>
+  <body<!--#if expr="$includefancy = Yes" --> onload="setupZoom();"<!--#endif --><!--#if expr="$includesyntaxhighlighter = Yes" --> onload="sh_highlightDocument();"<!--#endif -->>
 
     <script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
     <script type="text/javascript">
