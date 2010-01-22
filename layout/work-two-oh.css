@@ -602,15 +602,6 @@ color: #ffffff;
 	    display: none;
 }
 
-#player {
-display:block;
-width: 480px;
-height: 360px;
-margin-left: auto;
-margin-right: auto;
-text-align: center;
-}
-
 #corner-banner {
 background: url("images/corner-banner.png") no-repeat;
 display: block;
