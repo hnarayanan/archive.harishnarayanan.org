@@ -1,0 +1,80 @@
+<!--#set var="pagetitle" value="Automated algorithms for finite elasticity (beta!)" --><!--#set var="includesyntaxhighlighter" value="Yes" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
+<!--#set var="navigation" value="Research" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/navigator.html" -->
+              <div id="header">
+		<h1 id="title"><a href=""><!--#echo var="pagetitle" --></a></h1>
+	      </div>
+
+	      <div id="contents">
+		<!-- Things that can be added: Dates, collaborators, links to interesting software, things to read, related courses, books? -->
+		<p><em>You might want to return later when I have had the time to complete this page. What follows below is just an evolving skeleton.</em></p>
+		<p>Nonlinear elasticity theory plays a fundamental role in modelling the mechanical response of many polymeric and biological materials. Such materials are capable of undergoing finite deformation, and their material response is often characterised by complex, nonlinear constitutive relationships. Because of these difficulties, predicting the response of such materials to arbitrary loads requires numerical computation.</p>
+		<p>The steps involved in the construction of the required numerical algorithms are classical and straightforward in principle, but their application to non-trivial material models are typically tedious and error-prone. <a href="https://launchpad.net/cbc.solve/"><em>CBC.Twist</em></a> is our attempt to alleviate this problem.</p>
+		<img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/automated-mechanics/fishy.gif" class="centered-photo" width="520" height="336" alt="Hyperelastic fish in a flow field" title="A hyperelastic fish in a flow!" />
+		<p class="caption">Hyperelastic fish in a flow!</p>
+		  <p><a href="https://launchpad.net/cbc.solve/">CBC.Twist</a> is an automated computational framework for nonlinear elasticity based upon the finite element method. The framework aims to allow researchers to easily pose their problems in a straightforward manner, so that they may focus on higher-level modelling questions, without being hindered by specific implementation issues. It is built atop <a href="http://fenics.org/">the FEniCS project</a>, and is collaboratively developed <a href="http://www.gnu.org/philosophy/free-sw.html">free software</a>. We&#8217;d love for you to <a href="https://launchpad.net/cbc.solve/">try it</a> and tell us what you think!</p>
+		<img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/automated-mechanics/twisted-block.png" class="centered-photo" width="520" height="336" alt="Twisted hyperelastic block" title="Twisting a hyperelastic block" />
+		<p class="caption">Twisting a hyperelastic block</p>
+		<p><a href="https://launchpad.net/cbc.solve/">CBC.Twist</a> features a lot of nifty features such as </p>
+		<pre class="sh_python"># Import utility classes from cbc.twist
+from cbc.twist import *
+
+# Define the quasi-static hyperelasticity problem
+class Twist(StaticHyperelasticity):
+    def mesh(self):
+        return UnitCube(8, 8, 8)
+
+    def dirichlet_conditions(self):
+        clamp = Expression(("0.0", "0.0", "0.0"))
+        twist = Expression(("0.0",
+                            "y0+(x[1]-y0)*cos(a)-(x[2]-z0)*sin(a)-x[1]",
+                            "z0+(x[1]-y0)*sin(a)+(x[2]-z0)*cos(a)-x[2]"))
+        twist.y0 = 0.5
+        twist.z0 = 0.5
+        twist.a = pi/3
+        return clamp, twist
+
+    def dirichlet_boundaries(self):
+        left = "x[0] == 0.0"
+        right = "x[0] == 1.0"
+        return left, right
+
+    def body_force(self):
+        B = Expression(("0.0", "0.0", "0.0"))
+        return B
+
+    def material_model(self):
+        mu = 3.8461
+        lmbda = 5.7692
+        material = StVenantKirchhoff([mu, lmbda])
+        return material
+
+    def __str__(self):
+        return "Hyperelastic cube twisted 60 degrees"
+
+# Solve the problem and plot the solution
+problem = Twist()
+u = problem.solve()
+plot(u)</pre>
+
+
+
+<!-- (which is not yet closed, since it does not distinguish one material -->
+<!-- from another) can be posed generally in weak form using an elegant -->
+<!-- syntax (in Python) that closely resembles how it is written down on -->
+<!-- paper. Then, leveraging the automatic linearisation capabilities of -->
+<!-- the underlying software framework, we will see how one can easily pose -->
+<!-- sophisticated material models purely at the level of specifying a -->
+<!-- strain energy function, also using high-level Python syntax. The -->
+<!-- underlying framework performs the linearisation and generates -->
+<!-- efficient (C++) code for the finite element computation. Subsequently, -->
+<!-- information about the computational domain, (Dirichlet and Neumann) -->
+<!-- boundary conditions, and time-stepping details are each introduced -->
+<!-- using a few lines of high-level code, completing the specification of -->
+<!-- the initial- boundary-value problem for nonlinear elasticity. The talk -->
+<!-- will close with increasingly complex applications of the computational -->
+<!-- framework. -->
+
+
+		<p class="right"><a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/research/#areas">Explore my other research areas &#8594;</a></p>
+	      </div>
+<!--#include virtual="$MY_DOCUMENT_ROOT/generic/footer.html" -->
