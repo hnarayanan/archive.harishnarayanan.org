@@ -23,6 +23,6 @@ from mercurial.hgweb.request import wsgiapplication
 import mercurial.hgweb.wsgicgi as wsgicgi
 
 def make_web_app():
-    return hgweb("/div/platon/simula-u1/harish/www_docs", "site")
+    return hgweb("/srl/sh/home-0/harish/www_docs", "site")
 
 wsgicgi.launch(wsgiapplication(make_web_app))
