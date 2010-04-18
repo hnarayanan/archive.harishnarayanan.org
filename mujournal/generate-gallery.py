@@ -84,6 +84,18 @@ imagedata = [
 ('smogen09/20090817_2892.jpg', 'smogen09/thumbnails/20090817_2892.jpg'),
 ('smogen09/20090817_2895.jpg', 'smogen09/thumbnails/20090817_2895.jpg'),
 ('smogen09/20090817_3058.jpg', 'smogen09/thumbnails/20090817_3058.jpg'),
+('tfi10/20100405_0248.jpg', 'tfi10/thumbnails/20100405_0248.jpg'),    
+('tfi10/20100405_0254.jpg', 'tfi10/thumbnails/20100405_0254.jpg'),
+('tfi10/20100405_0255.jpg', 'tfi10/thumbnails/20100405_0255.jpg'),
+('tfi10/20100405_0261.jpg', 'tfi10/thumbnails/20100405_0261.jpg'),
+('tfi10/20100405_0269.jpg', 'tfi10/thumbnails/20100405_0269.jpg'),
+('tfi10/20100405_0280.jpg', 'tfi10/thumbnails/20100405_0280.jpg'),
+('tfi10/20100405_0282.jpg', 'tfi10/thumbnails/20100405_0282.jpg'),
+('tfi10/20100405_0285.jpg', 'tfi10/thumbnails/20100405_0285.jpg'),
+('tfi10/20100405_0289.jpg', 'tfi10/thumbnails/20100405_0289.jpg'),
+('tfi10/20100405_0295.jpg', 'tfi10/thumbnails/20100405_0295.jpg'),
+('tfi10/20100405_0300.jpg', 'tfi10/thumbnails/20100405_0300.jpg'),
+('tfi10/20100405_0307.jpg', 'tfi10/thumbnails/20100405_0307.jpg'),
 ];
 
 possibilities = range (0, len(imagedata), 1);
