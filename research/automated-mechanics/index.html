@@ -1,20 +1,16 @@
-<!--#set var="pagetitle" value="Automated algorithms for finite elasticity (beta!)" --><!--#set var="includesyntaxhighlighter" value="Yes" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
+<!--#set var="pagetitle" value="Automated algorithms for finite elasticity" --><!--#set var="includesyntaxhighlighter" value="Yes" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
 <!--#set var="navigation" value="Research" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/navigator.html" -->
               <div id="header">
 		<h1 id="title"><a href=""><!--#echo var="pagetitle" --></a></h1>
 	      </div>
 
 	      <div id="contents">
-		<!-- Things that can be added: Dates, collaborators, links to interesting software, things to read, related courses, books? -->
-		<p><em>You might want to return later when I have had the time to complete this page. What follows below is just an evolving skeleton.</em></p>
-		<p>Nonlinear elasticity theory plays a fundamental role in modelling the mechanical response of many polymeric and biological materials. Such materials are capable of undergoing finite deformation, and their material response is often characterised by complex, nonlinear constitutive relationships. Because of these difficulties, predicting the response of such materials to arbitrary loads requires numerical computation.</p>
-		<p>The steps involved in the construction of the required numerical algorithms are classical and straightforward in principle, but their application to non-trivial material models are typically tedious and error-prone. <a href="https://launchpad.net/cbc.solve/"><em>CBC.Twist</em></a> is our attempt to alleviate this problem.</p>
+		<p>Nonlinear elasticity theory plays a fundamental role in modelling the mechanical response of many polymeric and biological materials. Such materials are capable of undergoing finite deformation, and their material response is often characterised by complex, nonlinear constitutive relationships. Because of these difficulties, predicting the response of such materials to arbitrary loads requires numerical computation (usually based on the finite element method).</p>
+		<p>The steps involved in the construction of the required finite element algorithms are classical and straightforward in principle, but their application to non-trivial material models are typically tedious and error-prone. We believe our automated computational framework for nonlinear elasticity, <a href="https://launchpad.net/cbc.solve/">CBC.Twist</a>, is an elegant solution to this problem.</p>
 		<img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/automated-mechanics/fishy.gif" class="centered-photo" width="520" height="336" alt="Hyperelastic fish in a flow field" title="A hyperelastic fish in a flow!" />
 		<p class="caption">Hyperelastic fish in a flow!</p>
-		  <p><a href="https://launchpad.net/cbc.solve/">CBC.Twist</a> is an automated computational framework for nonlinear elasticity based upon the finite element method. The framework aims to allow researchers to easily pose their problems in a straightforward manner, so that they may focus on higher-level modelling questions, without being hindered by specific implementation issues. It is built atop <a href="http://fenics.org/">the FEniCS project</a>, and is collaboratively developed <a href="http://www.gnu.org/philosophy/free-sw.html">free software</a>. We&#8217;d love for you to <a href="https://launchpad.net/cbc.solve/">try it</a> and tell us what you think!</p>
-		<img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/automated-mechanics/twisted-block.png" class="centered-photo" width="520" height="336" alt="Twisted hyperelastic block" title="Twisting a hyperelastic block" />
-		<p class="caption">Twisting a hyperelastic block</p>
-		<p><a href="https://launchpad.net/cbc.solve/">CBC.Twist</a> features a lot of nifty features such as </p>
+		<p><a href="https://launchpad.net/cbc.solve/">CBC.Twist</a> aims to allow researchers to easily pose their problems in a straightforward manner, so that they may focus on higher-level modelling questions, without being hindered by specific implementation issues. It is built atop <a href="http://fenics.org/">the FEniCS project</a>, and is collaboratively developed <a href="http://www.gnu.org/philosophy/free-sw.html">free software</a>. We&#8217;d love for you to <a href="https://launchpad.net/cbc.solve/">try it</a> and tell us what you think!</p>
+		<p>The capabilities (and elegance!) of <a href="https://launchpad.net/cbc.solve/">CBC.Twist</a> is best captured in the following example, a hyperelastic block being twisted by 60 degrees.</p>
 		<pre class="sh_python"># Import utility classes from cbc.twist
 from cbc.twist import *
 
@@ -55,26 +51,40 @@ class Twist(StaticHyperelasticity):
 problem = Twist()
 u = problem.solve()
 plot(u)</pre>
+		<p>Notice that the code above only contains information directly pertinent to specification of the mechanics problem. This includes the definition of the computational domain, material model, boundary conditions and body forces. The underlying framework parses this human-readable Python code, automatically performs several steps (including the most tedious one of them all: linearisation of the nonlinear problem) and generates efficient C++ code for finite element computation.</p>
+		<p>When run, we see quadratic convergence of the Newton-Raphson scheme used to solve the nonlinear problem and a pretty solution!</p>
+		<img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/automated-mechanics/twisted-block.png" class="centered-photo" width="520" height="336" alt="Twisted hyperelastic block" title="Twisting a hyperelastic block" />
+		<p class="caption">Twisting a hyperelastic block</p>
+		<p>But the fun does not stop there. <a href="https://launchpad.net/cbc.solve/">CBC.Twist</a> includes a lot of other nifty features, including:</p>
+		<ul>
+		  <li>Built in support for a large class of material models.</li>
+		  <li>Easy specification of additional material models using a syntax that closely mirrors how continuum mechanics is posed on paper, e.g.:
+		    <pre class="sh_python">class MooneyRivlin(MaterialModel):
+    """Defines the strain energy function for a (two term)
+    Mooney-Rivlin material"""        
 
+    def model_info(self):
+        self.num_parameters = 2
+        self.kinematic_measure = "CauchyGreenInvariants"
 
+    def strain_energy(self, parameters):
+        I1 = self.I1
+        I2 = self.I2
 
-<!-- (which is not yet closed, since it does not distinguish one material -->
-<!-- from another) can be posed generally in weak form using an elegant -->
-<!-- syntax (in Python) that closely resembles how it is written down on -->
-<!-- paper. Then, leveraging the automatic linearisation capabilities of -->
-<!-- the underlying software framework, we will see how one can easily pose -->
-<!-- sophisticated material models purely at the level of specifying a -->
-<!-- strain energy function, also using high-level Python syntax. The -->
-<!-- underlying framework performs the linearisation and generates -->
-<!-- efficient (C++) code for the finite element computation. Subsequently, -->
-<!-- information about the computational domain, (Dirichlet and Neumann) -->
-<!-- boundary conditions, and time-stepping details are each introduced -->
-<!-- using a few lines of high-level code, completing the specification of -->
-<!-- the initial- boundary-value problem for nonlinear elasticity. The talk -->
-<!-- will close with increasingly complex applications of the computational -->
-<!-- framework. -->
-
-
+        [C1, C2] = parameters
+        return C1*(I1 - 3) + C2*(I2 - 3)
+		    </pre>
+		  </li>
+		  <li>Support for material heterogeneity (spatially-varying material constants).</li>
+		  <li>Support for time-dependent problems incorporating energy-momentum conserving time-stepping schemes.</li>
+		</ul>
+		<p>Additionally, the following extensions are being worked on:</p>
+		<ul>
+		  <li>Support for multiple materials and anisotropy.</li>
+		  <li>Goal-oriented adaptivity.</li>
+		  <li>Introducing coupling with other physics (including fluid-solid interaction).</li>
+		</ul>
+		<p>This software is part of research carried out in collaboration with Anders Logg and Kristoffer Selim at Simula Research Laboratory in 2009 and 2010. It is part of a larger project which aims to offer the same level of functionality (and ease of use) for general fluid, solid and fluid-solid interaction problems. It is available under the GNU GPL from its <a href="https://launchpad.net/cbc.solve/">project page on launchpad.net</a>.</p>
 		<p class="right"><a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/research/#areas">Explore my other research areas &#8594;</a></p>
 	      </div>
 <!--#include virtual="$MY_DOCUMENT_ROOT/generic/footer.html" -->
