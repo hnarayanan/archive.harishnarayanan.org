@@ -1,0 +1,13 @@
+<!--#set var="pagetitle" value="Robust methods for modelling biological flow" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
+<!--#set var="navigation" value="Research" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/navigator.html" -->
+              <div id="header">
+		<h1 id="title"><a href=""><!--#echo var="pagetitle" --></a></h1>
+	      </div>
+	      
+	      <div id="contents">
+		<p>Accurate and efficient modelling of biomedical flows is of substantial interest because of its immediate applicability to a variety of fields, including the design of medical devices, the planning of surgical procedures and most fundamentally, the scientific understanding of healthy and diseased biological function. The complexity in this problem arises from the fact that physically-interesting flows occur in complex, patient-specific geometries and often occur in conjunction with other physics such as the finite deformation of the vascular walls and biochemical reaction-diffusion processes.</p>
+		<p>The primary aim of this study is the development of a robust computational framework for biomedical flow simulation. Central to this development are adaptive mesh techniques based on <em>a posteriori</em> error estimates which rely on estimates of the errors of physical quantities of interest (goal quantities) to determine regions where the residual needs to be reduced. These estimates are calculated from the computed solution and the solution of an auxiliary (dual) problem containing information about the stability of the flow equations being solved and the goal quantities.</p>
+		<p>Highlighting our current application of interest, this exposition will present ideas in the context of a study of blood flow in an artery containing an aneurysm. We begin with an overview of the biology, which motivates the need for accurate computation of quantities which are implicated in the growth of aneurysms (such as the shear forces exerted by the blood flow on their vessel walls). Then, we proceed to present the finite-element scheme for solving the governing Navier-Stokes equations for blood flow and provide insight into the numerical analysis to determine the required error indicators for the goal quantities. Finally, we present an implementation of this adaptive scheme in FEniCS and apply it to our problem, resulting in the construction of optimal computational meshes to compute our goal quantities related to aneurysm growth to a specified accuracy requirement with minimal work.</p>
+		<p class="right"><a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/research/#areas">Explore my other research areas &#8594;</a></p>
+	      </div>
+<!--#include virtual="$MY_DOCUMENT_ROOT/generic/footer.html" -->
