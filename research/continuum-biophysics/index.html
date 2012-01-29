@@ -1,0 +1,146 @@
+<!--#set var="pagetitle" value="Understanding the physics of biology" --><!--#set var="includefancy" value="Yes" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
+<!--#set var="navigation" value="Research" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/navigator.html" -->
+              <div id="header">
+		<h1 id="title"><a href=""><!--#echo var="pagetitle" --></a></h1>
+	      </div>
+
+	      <div id="contents">
+		<p>First, since alliterations are always fun:</p>
+		<div class="showcase">
+		  <h2>Recent resplendent results!</h2>
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/constrict-top-face-displacement.png" title="Relaxation of the top face of a constricted tendon"><img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/thumbnails/constrict-top-face-displacement.png" alt="Research Highlight" /></a>
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/medicate-solute-concentration.png" title="Collagen growth localised to regions of medication"><img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/thumbnails/medicate-solute-concentration.png" alt="Research Highlight" /></a>
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/remodelling-example.png"	rel="lightbox[highlights]" title="Parametric study of radial remodelling"><img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/thumbnails/remodelling-example.png" alt="Research Highlight" /></a> 
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/constrict-vertical-flux.png" title="Vertical fluid flux in a constricted tendon"><img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/thumbnails/constrict-vertical-flux.png" alt="Research Highlight" /></a>
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/swell-growth-mechanics.png" title="The tendon is stronger and stiffer after growth"><img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/thumbnails/swell-growth-mechanics.png" alt="Research Highlight" /></a>
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/damaged-vertical-stress.png" title="Vertical stress in loaded skin recovering from damage"><img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/thumbnails/damaged-vertical-stress.png" alt="Research Highlight" /></a> 
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/swell-volume-evolution.png" title="Rapid swelling of a tendon submerged in a bath"><img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/thumbnails/swell-volume-evolution.png" alt="Research Highlight" /></a>
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/swell-after-growth.png" title="Increase in collagen concentration on growth"><img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/thumbnails/swell-after-growth.png" alt="Research Highlight" /></a>
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/tendon-viscoelasticity.png" title="Viscoelastic response of tendon"><img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/highlights/thumbnails/tendon-viscoelasticity.png" alt="Research Highlight" /></a>
+		</div>
+		<h2>An index of sorts</h2>
+		<ul class="index">
+		  <li><a href="#introduction">An introduction</a></li>
+		  <li><a href="#formulation">General formulation for growth in tissues</a></li>
+		  <li><a href="#mechanics">Mechanics of growing tissue</a></li>
+		  <li><a href="#applications">Drug delivery and wound healing</a></li>
+		  <li><a href="#cancer">Unbounded growth and cancer <em>(Coming soon!)</em></a></li>
+		</ul>
+		<h2><a id="introduction">An introduction</a></h2>
+		<p>Prompted by compelling clinical reports evidencing the pervasive role of mechanical factors influencing biological growth, our modelling work is aimed at gaining a deeper understanding of the biophysical bases underlying these influences.</p>
+		<div class="showcase">
+		  &#8220;All science is either physics or stamp collecting.&#8221;
+		  <br />&mdash; <a href="http://en.wikiquote.org/wiki/Ernest_Rutherford" title="Need more quotations?">Ernest Rutherford</a> (1871 &ndash; 1937)
+		</div>
+		<p>The utility of the resulting mathematical and computational framework extends across disciplines by helping steer and interpret experimental work, both under physiological and pathological cases of interest. Currently, our focus is directed toward a better understanding of the mechanics of growing soft tissue, specifically tendon, and looking closely at the processes that drive unbounded growth of cancerous tissue.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/one-construct.jpg" alt="Engineerd construct" title="One of Sarah&#8217;s engineered tendon constructs" />
+		<p class="caption">Our biological model: Sarah&#8217;s engineered tendon constructs.</p>
+		<p>This web page contains some highlights of our modelling effort. For more detailed expositions, the interested reader is directed toward more <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/writing/">formal articles</a>.</p>
+		<h2><a id="formulation">General formulation for growth in tissues</a></h2>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/tissue-continuum.png" alt="Continuum potatoes" title="The tissue as a continuum potato" />
+		<p class="caption">The tissue as a continuum potato.</p>
+		<p><em>Growth</em> in biological tissue is a direct outcome of cascades of complex, intracellular, biochemical reactions involving numerous species, their diffusion across cell membranes, and transport through the extra-cellular matrix. Both reaction and diffusion/transport are influenced by mechanics in a number of ways. Our modelling effort proposes a general continuum field formulation for growth capable of simulating this rich observed behaviour, and proceeds to specialise it incorporating different modelling assumptions&mdash;such as the use of an enzyme kinetics-based growth law&mdash;to better represent cases of interest.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/enzyme-kinetics.png" alt="Enzyme kinetics" title="Enzyme kinetics-based growth law" />
+		<p class="caption">Enzyme kinetics-based growth law.</p>
+		<p>Recognising that a growing tissue is an open system undergoing irreversible thermodynamics, the model incorporates the physics of multi-phase reacting systems, and deduces balance laws and a constitutive framework obeying the Second Law of Thermodynamics.</p>
+		<img class="centered" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/balance-laws.png" alt="The balance of mass and momenta for all species" title="The balance of mass and momenta for all species" />
+		<p class="caption">Reference configuration statements of the balance of mass and momenta for all species.</p>
+		<p>Notably, the transport of the extracellular fluid relative to the matrix is shown to be driven by the gradients of stress, concentration and chemical potential&mdash;a coupling of mass transport and mechanics that emerges directly.</p>
+		<img class="centered" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/driving-force.png" alt="Driving forces" title="Constitutive relationship for fluid flux" />
+		<p class="caption">A constitutive relationship relating the fluid flux to various driving forces.</p>
+		<p>Assumptions central to existing mechanics theories, such as the nature of the split of deformation maps across the different species involved, and those on momentum transfers between interacting species, are revisited, analysed and carefully revised in cases where they limit the biophysical correctness of predicted growth phenomena.</p>
+		<p>Coupled, non-linear partial differential equations arise from the theory to describe the complex physics. These differential equations are solved using a finite element scheme based on <em>operator-splits</em>; incorporating non-linear projection methods to treat incompressibility, energy-momentum conserving algorithms for dynamics, and mixed methods for stress gradient-driven fluxes.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/mesh.png" alt="FEM Mesh" title="A representative mesh used in the finite element calculations" />
+		<p class="caption">A representative mesh used in the finite element calculations.</p>
+		<p>One highlight of the numerical methods is a rigorous treatment of numerical stability issues that arise with any operator-splitting scheme. This analysis is critical to the ability to distinguish physical instabilities, such as unbounded growth of tumours, from those that are artifacts of the numerical methods. Another key feature is the reformulation of the reaction-transport equations to embed the incompressibility constraint on the fluid phase, enabling a straightforward implementation of numerical stabilisation in the advection-dominated limit.</p>
+		<img class="centered" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/stabilisable-form.png" alt="Stabilisable form of the solute transport equation" title="The solute transport equation in classical, stabilisable form" />
+		<p class="caption">The solute transport equation in classical, stabilisable form.</p>
+		<h2><a id="mechanics">Mechanics of growing tissue</a></h2>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/growth-kinematics.png" alt="Kinematics of growth" title="The kinematics of growth" />
+		<p class="caption">The kinematics of growth.</p>
+		<p>
+		  Using model geometries and imposing classes of initial and boundary conditions approximating experiments in our laboratory, the computational framework developed is used to demonstrate aspects of the coupled phenomena as the tissue grows. In these foundational calculations, only two phases&mdash;fluid and collagen&mdash;are included. The collagen phase is modelled by the anisotropic worm-like chain model, and the fluid phase is modelled as ideal and nearly incompressible. The interconversion between these two phases is modelled using first-order chemical kinetics.
+		</p>
+		<p>For a tissue undergoing finite strains, the transport equations can be formulated, mathematically, in terms of quantities with respect to either the reference or current (deformed) configuration. However, the physics of fluid-tissue interactions, and the imposition of relevant boundary conditions, is best understood and represented in the current configuration.</p>
+		<div class="comment">
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/video/research/continuum-biophysics/pinch_cont4.mpg"><img width="32px" height="32px" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/layout/images/icons/darkgrey/video-x-generic.png" alt="Video icon" title="View the video (MPG)" /></a>
+		  Watch the <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/video/research/continuum-biophysics/pinch_cont4.mpg">unbounded build-up of fluid</a> due to the (unphysical) specification of constant reference fluid concentration boundary conditions, while attempting to simulate a loaded tendon immersed in a bath.
+		</div>
+		<div class="comment">
+		  <h3>Having difficulty viewing a video?</h3>
+		  <a href="http://sourceforge.net/projects/ffdshow/"><img width="32px" height="32px" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/layout/images/icons/darkgrey/help-browser.png" alt="Help icon" title="Download the required codecs for Windows" /></a>
+		  In order to make their sizes more palatable for download, the videos on this page have been compressed using different algorithms. If you are having difficulty viewing any of them, please follow the following instructions on acquiring the necessary <a href="http://en.wikipedia.org/wiki/Codec">codecs</a>:
+		  <br />
+		  <br />&raquo; Windows users need to download and install the <a href="http://sourceforge.net/projects/ffdshow/">ffdshow codec pack</a>. Upon installation, you should be able to play the videos using any installed video player, including Windows Media Player.
+		  <br />
+		  <br />&raquo; GNU/Linux and Mac OS X users need to download and install either <a href="http://www.videolan.org/vlc/">VLC Media Player</a> or <a href="http://www.mplayerhq.hu/design7/news.html">MPlayer</a> (with a complete set of codecs) to play the videos.
+		</div>
+		<p>When a tendon having an initially-uniform distribution of collagen is immersed into a nutrient-rich bath, nutrient-rich fluid is transported into the tissue, and growth occurs due to the formation of additional collagen.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/swell-after-growth.png" alt="Final distribution of collagen" title="Distribution of collagen after growth" />
+		<p class="caption">Distribution of collagen after growth.</p>
+		<div class="comment">
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/video/research/continuum-biophysics/swell_cont5.avi"><img width="32px" height="32px" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/layout/images/icons/darkgrey/video-x-generic.png" alt="Video icon" title="View the video (DivX AVI)" /></a>
+		  The infusing nutrient-rich fluid causes the tendon to grow. Watch the <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/video/research/continuum-biophysics/swell_cont5.avi">collagen concentration increase</a> over half-an-hour.
+		</div>
+		<p>There is a rapid, fluid transport-dominated swelling of the tendon initially as it is immersed into the fluid bath. This is followed by a slower, reaction-driven growth phase.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/swell-volume-evolution.png" alt="Volume evolution" title="Rapid swelling of a tendon immersed in a bath" />
+		<p class="caption">Rapid swelling of a tendon immersed in a bath.</p>
+		<div class="comment">
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/video/research/continuum-biophysics/swell_cont4.mpg"><img width="32px" height="32px" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/layout/images/icons/darkgrey/video-x-generic.png" alt="Video icon" title="View the video (MPG)" /></a>
+		  Pay close attention to observe the initial, <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/video/research/continuum-biophysics/swell_cont4.mpg">fluid transport-dominated swelling of the tissue</a>, followed by much slower reaction-driven growth.
+		</div>
+		<p>On performing a uniaxial tension test on the tendon before and after growth, it is observed that the grown tissue&mdash;having a higher concentration of collagen&mdash;is stiffer and stronger; which is in accordance with experiment.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/swell-growth-mechanics.png" alt="Uniaxial stress-strain curves" title="The grown tissue is stiffer and stronger" />
+		<p class="caption">The grown tissue is stiffer and stronger.</p>
+		<p>Upon subjecting the tendon to a load-unload cycle, a stress-strain curve characteristic of viscoelastic tissue is observed. Here, the area between the loading and unloading paths is the hysteretic energy loss due to viscous dissipation.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/tendon-viscoelasticity.png" alt="Viscoelastic effects" title="Viscoelastic effects observed in the model" />
+		<p class="caption">Viscoelastic effects observed in the model.</p>
+		<div class="comment">
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/video/research/continuum-biophysics/cyclic-sin.ffmpeg.avi"><img width="32px" height="32px" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/layout/images/icons/darkgrey/video-x-generic.png" alt="Video icon" title="View the video (FFMPEG AVI)" /></a>
+		  Observe the <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/video/research/continuum-biophysics/cyclic-sin.ffmpeg.avi">induced fluid flow</a> as the tendon is subjected to a cyclically varying load. Friction between the solid and fluid phases results in energy dissipation.
+		</div>
+		<p>Qualitatively, this viscoelastic behaviour compares favourably with our corresponding experimental tests on two-week-old tibialis anterior tendons in the laboratory.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/hysteresis-experiment.png" alt="Hysteresis in tendon" title="Hysteresis observed in experiments on TA tendons" />
+		<p class="caption">Hysteresis observed in experiments on tibialis anterior tendons.</p>
+		<p>Application of a constrictive radial load&mdash;where the maximum strain in the radial direction is experienced half-way through the height of the tendon&mdash;to a tendon immersed in a fluid-filled bath results in a stress-gradient induced fluid flux. This drives fluid away from the central plane.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/constrict-vertical-flux.png" alt="Vertical fluid flux in a constricted tendon" title="Vertical fluid flux in a constricted tendon" />
+		<p class="caption">Vertical fluid flux in a constricted tendon.</p>
+		<div class="comment">
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/video/research/continuum-biophysics/constrict_total_flux_3_4.avi"><img width="32px" height="32px" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/layout/images/icons/darkgrey/video-x-generic.png" alt="Video icon" title="View the video (DivX AVI)" /></a>
+		  The constrictive radial load sets up a <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/video/research/continuum-biophysics/constrict_total_flux_3_4.avi">fluid flux in the vertical direction</a>, driving fluid away from the central plane toward the top and bottom faces of the tendon.
+		</div>
+		<p>This pressure wave set up in the fluid travels toward the top and bottom faces, and as the fluid leaves these surfaces, we observe that the tendon relaxes.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/constrict-top-face-displacement.png" alt="Displacement of the top face" title="Relaxation of the top face of a constricted tendon" />
+		<p class="caption">Relaxation of the top face of a constricted tendon.</p>
+		<div class="comment">
+		  <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/video/research/continuum-biophysics/constrict_ref_conc_3.avi"><img width="32px" height="32px" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/layout/images/icons/darkgrey/video-x-generic.png" alt="Video icon" title="View the video (DivX AVI)" /></a>
+		  The stress gradient-driven fluid flux causes a <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/video/research/continuum-biophysics/constrict_ref_conc_3.avi">decrease in the reference fluid concentration</a> near the central plane. Pay close attention to observe the relaxation of the top face as the fluid leaves the surface.
+		</div>
+		<h2><a id="applications">Drug delivery and wound healing</a></h2>
+		<p>Having established the fundamental behaviour of the formulation, we now turn to more sophisticated applications.</p>
+		<p>In order to model localised, bolus delivery of regulatory chemicals to the tendon while accounting for mechanical effects, we introduce additional species: a solute, and a distribution of fibroblasts that are characterised by their cell concentration. Both concentration gradient-driven mass transport and stress gradient-driven fluid flow are incorporated into this illustration, which demonstrates the use of the formulation in studying the efficacy of drug delivery mechanisms. Michaelis-Menten enzyme kinetics is used to determine the rates of solute consumption and, consequently, collagen production.</p>
+		<img class="centered" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/michaelis-menten.png" alt="Michaelis-Menten enzyme kinetics" title="Michaelis-Menten enzyme kinetics" />
+		<p class="caption">Michaelis-Menten enzyme kinetics.</p>
+		<p>In addition to subjecting the tendon immersed in the bath to the constrictive radial load described earlier, a solute-rich bulb with its centre on the axis of the tendon is introduced. The relatively small magnitude of the fluid mobility&mdash;with respect to the diffusion coefficient for the solute through the fluid&mdash;results in a relatively small stress gradient-driven flux, and the transport of the solute is diffusion dominated. Consequently, as time progresses, the solute primarily diffuses locally, and as the solute concentration in a region increases, the enzyme-kinetics model predicts a small source term for collagen, and we observe nominal growth.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/medicate-solute-concentration.png" alt="Collagen concentration at an early time" title="Collagen growth localised to regions of medication" />
+		<p class="caption">Collagen growth localised to regions of medication.</p>
+		<p>The following computation demonstrates the capability of the formulation in studying the self-healing of damaged tissue. Incorporating a cell-signalling parameter into the chemical kinetics, the formation of collagen is spatially biased toward damaged regions of the tissue.</p>
+		<img class="centered" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/damage-healing-source.png" alt="Chemical kinetics with damage healing" title="Chemical kinetics with a damage-healing parameter" />
+		<p class="caption">Chemical kinetics with a damage-healing parameter.</p>
+		<p>Turning to damaged skin as our tissue of interest, we begin by delineating the damaged regions&mdash;characterised by a sudden reduction in the concentration of collagen&mdash;from the rest of the tissue.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/damaged-region.png" alt="Damaged region of skin" title="Damaged region of skin demarcated by green" />
+		<p class="caption">Damaged region of skin demarcated by green.</p>
+		<p>This damaged tissue is introduced to a nutrient-rich environment, and the cell-signalling parameter induces preferential growth in these damaged regions. We allow this healing process to evolve under two different conditions&mdash;under no load and under uniaxial stress&mdash;to study the influence of mechanics on the properties of healed tissue.</p>
+		<p>The anisotropic nature of these tissues arises from the microstructural alignment of their constituent collagen fibers, and the directionality of newly-deposited fibers are determined by the eigenvectors of the applied stress field. When the healing process is carried out under uniaxial stress, with the orientation of the stress being defined by the initially-stiff directionality of the tissue, the newly-deposited collagen has anisotropic properties which are identical to collagen in the undamaged tissue. This results in a healed tissue indistinguishable from the undamaged tissue.</p>
+		<p>However, when the healing process is carried out under no load, the newly-deposited collagen consists of arbitrarily-directed fibers, resulting in a formation of isotropic tissue in the damaged regions as the tissue heals. This results in a healed tissue being more compliant than the undamaged tissue along the originally-stiff direction of the tissue. Thus, upon being subjected to a load, these compliant healed regions experience a reduced stress.</p>
+		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/continuum-biophysics/damaged-vertical-stress.png" alt="Vertical stress in skin" title="Vertical stress in skin recovering from damage" />
+		<p class="caption">Vertical stress in skin recovering from damage.</p>
+		<p>This result is analogous to the experimentally observed hypertrophic scarring of skin as it recovers from damage under no applied load.</p>
+		<h2><a id="cancer">Unbounded growth and cancer</a></h2>
+		<div class="comment">
+		  <img width="32px" height="32px" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/layout/images/icons/darkgrey/emblem-important.png" alt="Warning icon" title="Coming soon!" />
+		  Coming this summer, to a browser near you.<br />&nbsp;
+		</div>
+		<p class="right"><a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/research/#areas">Explore my other research areas &#8594;</a></p>
+	      </div>
+<!--#include virtual="$MY_DOCUMENT_ROOT/generic/footer.html" -->
