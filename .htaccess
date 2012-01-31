@@ -13,3 +13,4 @@ ErrorDocument 404 "I was once a delicious page. A little too delicious."
 ErrorDocument 403 "Here be dragons. Rawr!"
 
 RewriteRule ^cv.pdf$ /~harish/files/cv/cv.pdf [NC,QSA,L]
+RewriteRule ^moments/(.*) /~harish/photos/$1 [NC,QSA,L,R=301]
