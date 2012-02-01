@@ -1,4 +1,4 @@
-<!--#set var="pagetitle" value="Personal project portfolio" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
+<!--#set var="pagetitle" value="Personal project portfolio" --><!--#set var="includefancy" value="Yes" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
 <!--#set var="navigation" value="Projects" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/navigator.html" -->
               <div id="header">
 		<h1 id="title"><a href=""><!--#echo var="pagetitle" --></a></h1>
@@ -102,8 +102,12 @@
 		  </tr>
 		</table>
 		<h2 id="software">Recent software projects</h2>
-		<p>Dorsal, weight tracking, colour transformation, iPhone calculator</p>
+		<h3><a href="http://launchpad.net/dorsal">Dorsal</a></h3>
+		<a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/software/dorsal-lucid.png"><img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/software/dorsal-lucid.small.png" alt="Dorsal being used to compile the FEniCS Project on Ubuntu" title="Dorsal being used to compile the FEniCS Project on Ubuntu" /></a>
+		<p class="caption">Dorsal being used to compile the FEniCS Project on Ubuntu</p>
+		<p>A lot of the reseach code I write and distribute relies on mathematics libraries written by other people. Those libraries in turn have numerous dependencies, and keeping track of all this manually can be quite time-consuming and complicated. <a href="http://launchpad.net/dorsal">Dorsal</a> is my attempt at a simple package management system that hopes to alleviate this problem. Dorsal is capable of building mathematical software aimed at solving differential equations (<a href="http://fenicsproject.org/">the FEniCS Project</a>, <a href="http://dealii.org/">Deal.ii</a> and <a href="http://www.dune-project.org/">Dune</a>), as well as their dependencies, for various platform. It is written in Bash and distributed under the GNU GPL.</p>
+<!--		<p>weight tracking, colour transformation, iPhone calculator</p>-->
 		<h2 id="education">Mechanics education</h2>
-		<p>Mechanics academy</p>
+<!--		<p>Mechanics academy</p>-->
 	      </div>
 <!--#include virtual="$MY_DOCUMENT_ROOT/generic/footer.html" -->
