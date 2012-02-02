@@ -1,8 +1,3 @@
-* Update 'About' page
-** Make contact information more prominent
-* Complete research pages
-** Add 'Research Fish' image
-* Align 'Talks' page with Simula listing
 * Clean up and populate 'Art' page
 ** Fix CSS for FancyZoom
 ** Add many more images (and clean up list to highlight only decent ones)
@@ -10,13 +5,10 @@
 * Add Paris images to 'muJournal' page
 
 - Add some sort of breadcrumb navigation for complex pages.
-- Add two more galleries to moments
-- Complete at least one research page to figure out breadcrumbing
 
 Writing page
 
 1. Clean up publications list
-   1.1 Add a preprint for the paper "Experimental and computational investigation of viscoelasticity of native and engineered ligament and tendon."
    1.2 Find DOI entries for the two Oberwolfach chapters
    1.3 Make the shape reconstruction article look not like a class project
 3. Add more articles to the 'Writing' page
@@ -25,4 +17,3 @@ Writing page
         i. Grad school FAQ
        ii. Maxtor hard drive in GNU/Linux
     3.3 Diary entries
-4. Add website stuff to list of software projects?
