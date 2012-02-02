@@ -1,0 +1,3 @@
+MAILTO="harish@simula.no"
+* * * * * cd /srl/sh/home-0/harish/www_docs/mujournal && ./generate-gallery.py
+*/15 * * * * cd /srl/sh/home-0/harish/www_docs/planet && ./planet.py mujournal/config.ini && cd /srl/sh/home-0/harish/www_docs/mujournal && perl -pi -e 's/>harish: />/g' index.html
