@@ -5,7 +5,7 @@
 	      </div>
 
 	      <div id="contents">
-		<p>Being a geek, it&#8217;s sometimes hard to separate the work I do for my day job as a mathematical physics researcher and the projects I do for fun. But I am going to try, and what follows is an incomplete list of my personal projects, broadly classfied as <a href="#websites">web sites</a>, <a href="#software">software projects</a> and <a href="#education">mechanics education</a>. Many of these projects are open source, so feel free to try them out and do let me know if you&#8217;re interested in contributing to them!</p>
+		<p>Being a geek, it&#8217;s sometimes hard to separate the <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/research/#software">work I do for my day job</a> as a mathematical physics researcher and the projects I do for fun. But I am going to try, and what follows is an incomplete list of my personal projects, broadly classfied as <a href="#websites">web sites</a>, <a href="#software">software projects</a> and <a href="#education">mechanics education</a>. Many of these efforts are open source, so feel free to try them out and do let me know if you&#8217;re interested in contributing to them!</p>
 		<h2 id="websites">Sites around the web</h2>
 		<p>I greatly enjoy web design and programming as they satisfy my twin urges for creative expression and technical geekery. Here are some sites I&#8217;ve created over the years.</p>
 		<div class="decorated-gallery">
@@ -51,7 +51,7 @@
 		  </div>
 		</div>
 		<br style="clear:both;" />
-		<p>Also, the design used for this web site is released under the terms of the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a> (GPL). If you like it, feel free to <a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/files/projects/simplicity/simplicity-2.1.0.zip">download</a> and use the template (XHTML, CSS and layout graphics) on your own website in accordance with the GPL. If you&#8217;re shy about taking the design, don&#8217;t be&#8212;there&#8217;s a long list of people who&#8217;ve enjoyed using it!</p>
+		<p>Also, the design used for this very web site is released under the terms of the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a> (GPL). If you like it, feel free to <a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/files/projects/simplicity/simplicity-2.1.0.zip">download</a> and use the template (XHTML, CSS and layout graphics) on your own website in accordance with the GPL. If you&#8217;re shy about taking the design, don&#8217;t be&#8212;there&#8217;s a long list of people who&#8217;ve enjoyed using it!</p>
 		<table class="statistics">
 		  <tr>
 		    <td><a href="http://edwardkerlin.org/">Edward L. Kerlin</a></td>
@@ -78,6 +78,12 @@
 		    <td><a href="http://www.ravazzani.it/">Giovanni Ravazzani</a></td>
 		  </tr>
 		  <tr>
+		    <td><a href="http://faculty.philau.edu/raon/">Niny Z. Rao</a></td>
+		    <td><span class="outdated">Jim Eagle</span></td>
+		    <td><span class="outdated">Ole Mollenhauer</span></td>
+		    <td><span class="outdated">Jo&#227;o F. Ferreira</span></td>
+		  </tr>
+		  <tr>
 		    <td><span class="outdated">Kurtis R. Schaeffer</span></td>
 		    <td><span class="outdated">uri.is</span></td>
 		    <td><span class="outdated">Turker Keskinpala</span></td>
@@ -95,11 +101,6 @@
 		    <td><span class="outdated">daaku.org</span></td>
 		    <td><span class="outdated">LuxVis</span></td>
 		  </tr>
-		  <tr>
-		    <td><span class="outdated">Jim Eagle</span></td>
-		    <td><span class="outdated">Ole Mollenhauer</span></td>
-		    <td><span class="outdated">Jo&#227;o F. Ferreira</span></td>
-		  </tr>
 		</table>
 		<h2 id="software">Recent software projects</h2>
 		<h3>Dorsal</h3>
@@ -107,8 +108,8 @@
 		<p class="caption">Dorsal being used to install the FEniCS Project on Ubuntu</p>
 		<p>A lot of the <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/research/#software">research code</a> I write and distribute relies on mathematics libraries written by other people. Those libraries in turn have numerous dependencies, and keeping track of all this manually can be quite time consuming and complicated. <a href="http://launchpad.net/dorsal">Dorsal</a> is my attempt at a simple package management system that hopes to alleviate this problem. Dorsal is capable of building mathematical software aimed at solving differential equations (<a href="http://fenicsproject.org/">the FEniCS Project</a>, <a href="http://dealii.org/">Deal.ii</a> and <a href="http://www.dune-project.org/">Dune</a>), as well as their dependencies, for various platform. It is written in Bash and <a href="https://launchpad.net/dorsal/+download">distributed under the GNU GPL</a>.</p>
 		<h3>A computer algebra system for iOS</h3>
-		<a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/software/calculator-app.png"><img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/software/calculator-app.small.png" alt="Differentiating the inverse of matrix on the iPhone" title="Differentiating the inverse of matrix on the iPhone" /></a>
-		<p class="caption">Differentiating the inverse of matrix on the iPhone</p>
+		<a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/software/calculator-app.png"><img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/software/calculator-app.small.png" alt="Differentiating the inverse of a matrix on the iPhone" title="Differentiating the inverse of a matrix on the iPhone" /></a>
+		<p class="caption">Differentiating the inverse of a matrix on the iPhone</p>
 		<p>One of the first things I did upon getting an iPhone last year was to fork over an additional $99 to <a href="http://developer.apple.com/">developer.apple.com</a>, to get access to their iOS development tools and the right to run my own apps on my phone. This has been exciting because programming for the phone has involved learning a lot: a whole new programming paradigm, touch-based UI design, a new programming language and a host of new APIs.</p>
 		<p>It is in the midst of all this manic learning that I started working in earnest on my first iOS app: an as-yet unnamed computer algebra system. Its backend symbolic algebra engine is powered by <a href="http://www.ginac.de/">GiNaC</a> and frontend equation renderer is <a href="http://code.google.com/p/mathjax-ios/">MathJax</a>. While the core functionality has been in place for some time now, I am still trying to arrive at an intuitive user interface. If you have any ideas and are interested in contributing to my efforts, please get in touch!</p>
 <!--		<h3>Other simple tools</h3> -->
