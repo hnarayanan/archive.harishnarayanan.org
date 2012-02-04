@@ -1,19 +1,12 @@
-* Clean up and populate 'Art' page
-** Fix CSS for FancyZoom
-** Add many more images (and clean up list to highlight only decent ones)
-** Add other kinds of art to the page?
-* Add Paris images to 'muJournal' page
+* research
+** Work on content for cardiac mechanics
+** Work on content for chondrocyte electrophysiology
+** Work on content for robust bio-flows
+** Work on content for phase transfer
+** Work on content for tumour growth
+** Add analytical NS/FSI solution
+** Make recent results dynamic
+*  projects
+** Add two or three small projects
+** Add link to launchpad
 
-- Add some sort of breadcrumb navigation for complex pages.
-
-Writing page
-
-1. Clean up publications list
-   1.2 Find DOI entries for the two Oberwolfach chapters
-   1.3 Make the shape reconstruction article look not like a class project
-3. Add more articles to the 'Writing' page
-   3.1 Update work-related content to match Simula page
-   3.2 Informative pieces
-        i. Grad school FAQ
-       ii. Maxtor hard drive in GNU/Linux
-    3.3 Diary entries
