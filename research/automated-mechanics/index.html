@@ -54,7 +54,7 @@ plot(u)</pre>
 		<p>Notice that the code above only contains information directly pertinent to specification of the mechanics problem. This includes the definition of the computational domain, material model, boundary conditions and body forces. The underlying framework parses this human-readable Python code, automatically performs several steps (including the most tedious one of them all: linearisation of the nonlinear problem) and generates efficient C++ code for finite element computation.</p>
 		<p>When run, we see quadratic convergence of the Newton-Raphson scheme used to solve the nonlinear problem and a pretty solution!</p>
 		<img src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/automated-mechanics/twisted-block.png" class="centered-photo" width="520" height="336" alt="Twisted hyperelastic block" title="Twisting a hyperelastic block" />
-		<p class="caption">Twisting a hyperelastic block</p>
+		<p class="caption">Twisting a hyperelastic block.</p>
 		<p>But the fun does not stop there. <a href="https://launchpad.net/cbc.solve/">CBC.Twist</a> includes a lot of other nifty features, including:</p>
 		<ul>
 		  <li>Built in support for a large class of material models.</li>
