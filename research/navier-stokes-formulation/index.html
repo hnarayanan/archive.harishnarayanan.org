@@ -1,0 +1,36 @@
+<!--#set var="pagetitle" value="Some thoughts on the Navier-Stokes equations" --><!--#set var="includemathjax" value="Yes" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
+<!--#set var="navigation" value="Research" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/navigator.html" -->
+              <div id="header">
+		<h1 id="title"><a href=""><!--#echo var="pagetitle" --></a></h1>
+	      </div>
+
+	      <div id="contents">
+		<p><em>This page serves to document some of my thoughts on the formulation of the Navier-Stokes equations in the hope that it will be of benefit to others.</em></p>
+		<h2>A tale of two formulations</h2>
+		<p>It is common in the literature to start with the <em>Laplacian form</em> of the Navier-Stokes equations,</p>
+		<p>		  
+		  \begin{align}
+		  \mathrm{div}(v) &= 0  \\
+		  \rho \frac{\partial v}{\partial t} + \rho \left(\mathrm{grad}(v)\right)v &= -\mathrm{grad}(p) + \mu\; \mathrm{lap}(v)\;,
+		  \end{align}
+		</p>
+		<p>when going about deriving numerical methods to simulate viscous flow. When considered in this strong form, the above formulation is equivalent to the following <em>divergence form</em> arising naturally from continuum mechanics:
+		<p>
+		  \begin{align}
+		  \mathrm{div}(v) &= 0  \\
+		  \rho \frac{\partial v}{\partial t} + \rho \left(\mathrm{grad}(v)\right)v &= \mathrm{div}(\sigma),
+		  \end{align}
+		</p>
+		<p>where, for a Newtonian fluid, \(\sigma = -p\; I\ + \mu\; \left(\mathrm{grad}(u) + \mathrm{grad}(u)^{T} \right)\).</p>
+		<p>When integrated by parts to construct a weak form, the two formulations above return different Neumann boundary terms. The <em>Divergence formulation</em> introduces a term with the traction, \( \sigma\; n \), whereas the <em>Laplacian formulation</em> introduces a boundary term with the normal derivative of the velocity, \(\frac{\partial u}{\partial n}\).</p>
+		<p>Both these points of view are of interest, as demonstrated by the following example.</p>
+		<p>Consider channel flow. At the outlet, if the flow is developed, we know that there is a pressure and there is a shear stress, which is unknown and definitely not zero. So how can one use the stress boundary condition from the Divergence formulation? The natural choice is thus the Laplacian formulation and the du_x/dn=0 and \int p =0 conditions. On the other hand, in free surface flow you need to set the stress at the surface to a value (zero usually), and then you need a Neumann condition with the stress vector, i.e., the div(sigma) formulation.</p>
+
+		<p>But we should be careful.
+		1. If not implemented carefully, the lapl formulation will violate obj as it does not introduce the notion of a symmetric Cauchy stress.
+		2. Be careful how you implement the boundary conditions or you will otherwise not see the flow you want.</p>
+		<h2>Some analytical solutions</h2>
+		<p>The following are some analyitical</p>
+		<p class="right"><a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/research/#areas">Explore my other research areas &#8594;</a></p>
+	      </div>
+<!--#include virtual="$MY_DOCUMENT_ROOT/generic/footer.html" -->
