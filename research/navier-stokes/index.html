@@ -7,7 +7,7 @@
 	      <div id="contents">
 		<h2>A tale of two formulations</h2>
 		<p>It is common in the literature to start with the <em>Laplacian formulation</em> of the Navier-Stokes equations,</p>
-		<p>		  
+		<p>  
 		  \begin{align}
 		  \mathrm{div}(v) &= 0  \\
 		  \rho \frac{\partial v}{\partial t} + \rho \left(\mathrm{grad}(v)\right)v &= -\mathrm{grad}(p) + \mu\; \mathrm{lap}(v)\;,
@@ -30,7 +30,12 @@
 		<img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/research/navier-stokes/channel-flow-improper.png" alt="Channel flow with improper boundary conditions" title="Channel flow with improper boundary conditions" />
 		<p class="caption">Divergence formulation with &#8220;do nothing&#8221; traction boundary conditions.</p>
 		<h2>Some analytical solutions</h2>
-		<p>The following are some analyitical solutions for the Navier-Stokes equations, useful to benchmark numerical algorithms.</p>
+		<p>The following are some analytical solutions for the Navier-Stokes equations, useful to <a href="https://launchpad.net/nsbench">benchmark</a> numerical algorithms.</p>
+		<ul>
+		  <li><a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/projects/navier-stokes/analytical-ns-2d.pdf">A 2D solution</a> generated in Mathematica.</li>
+		  <li><a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/projects/navier-stokes/analytical-ns-3d.pdf">A 3D solution</a> generated in Mathematica.</li>
+		  <li>A SymPy script used to <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/projects/navier-stokes/analytical_fsi.py">test analytical fluid-structure-interaction solutions</a>.</li>
+		</ul>
 		<p class="right"><a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/research/#areas">Explore my other research areas &#8594;</a></p>
 	      </div>
 <!--#include virtual="$MY_DOCUMENT_ROOT/generic/footer.html" -->
