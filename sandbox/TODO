@@ -1,7 +1,7 @@
 * research
-** Create content for robust bio-flows
 ** Make recent results dynamic
-** Add link to launchpad
+** Add link to launchpad?
 ** Canonicalise paths by removing grad-school/ and post-doc/ splits
+** Make the 'Explore my other research areas' link part of a common include and hide while printing
 * projects
 ** Clean up and upload R data imputation+pooling scripts, bootstrapping etc.
