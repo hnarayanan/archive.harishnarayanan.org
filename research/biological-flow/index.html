@@ -32,32 +32,41 @@
 from cbc.flow import *
 
 # Define the flow problem
-class Aneurysm(NavierStokes):
+class Channel(NavierStokes):
+
     def mesh(self):
-        return Mesh("aneurysm.xml")
+        return UnitSquare(16, 16)
 
     def viscosity(self):
         return 1.0 / 8.0
 
-    def boundary_conditions(self, V, Q):
-        bcu = DirichletBC(V, Constant((0.0, 0.0)), \
-                             noslip_boundary)
-        bcp0 = DirichletBC(Q, Constant(1.0), \
-                              inflow_boundary)
-        bcp1 = DirichletBC(Q, Constant(0.0), \
-                              outflow_boundary)
-        return [bcu], [bcp0, bcp1]
+    def velocity_dirichlet_values(self):
+        return [(0, 0)]
+
+    def velocity_dirichlet_boundaries(self):
+        return ["x[1] == 0.0 || x[1] == 1.0"]
+
+    def pressure_dirichlet_values(self):
+        return [1, 0]
+
+    def pressure_dirichlet_boundaries(self):
+        return ["x[0] == 0.0", "x[0] == 1.0"]
+
+    def velocity_initial_condition(self):
+        return (0, 0)
+
+    def pressure_initial_condition(self):
+        return "1 - x[0]"
 
     def end_time(self):
-        return 5.0
+        return 0.5
 
     def __str__(self):
-        return "Blood flow through an aneurysm"
+        return "Pressure-driven flow across a channel"
 
-# Solve the problem and plot the solution
-problem = Aneurysm()
-u, p = problem.solve()
-plot(u)</pre>
+# Setup and solve problem
+problem = Channel()
+u, p = problem.solve()</pre>
 		<p class="caption">Posing and solving a simple flow problem with <a href="https://launchpad.net/cbc.solve">CBC.Flow</a>.</p>
 		<p class="right"><a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/research/#areas">Explore my other research areas &#8594;</a></p>
 	      </div>
