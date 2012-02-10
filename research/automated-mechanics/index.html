@@ -16,23 +16,22 @@ from cbc.twist import *
 
 # Define the quasi-static hyperelasticity problem
 class Twist(StaticHyperelasticity):
+
     def mesh(self):
         return UnitCube(8, 8, 8)
 
-    def dirichlet_conditions(self):
+    def dirichlet_values(self):
         clamp = Expression(("0.0", "0.0", "0.0"))
         twist = Expression(("0.0",
-                            "y0+(x[1]-y0)*cos(a)-(x[2]-z0)*sin(a)-x[1]",
-                            "z0+(x[1]-y0)*sin(a)+(x[2]-z0)*cos(a)-x[2]"))
-        twist.y0 = 0.5
-        twist.z0 = 0.5
-        twist.a = pi/3
-        return clamp, twist
+                            "y0+(x[1]-y0)*cos(t)-(x[2]-z0)*sin(t)-x[1]",
+                            "z0+(x[1]-y0)*sin(t)+(x[2]-z0)*cos(t)-x[2]"),
+                           y0=0.5, z0=0.5, t=pi/3)
+        return [clamp, twist]
 
     def dirichlet_boundaries(self):
         left = "x[0] == 0.0"
         right = "x[0] == 1.0"
-        return left, right
+        return [left, right]
 
     def body_force(self):
         B = Expression(("0.0", "0.0", "0.0"))
@@ -45,11 +44,14 @@ class Twist(StaticHyperelasticity):
         return material
 
     def __str__(self):
-        return "Hyperelastic cube twisted 60 degrees"
+        return "A hyperelastic cube twisted by 60 degrees"
+
+# Setup the problem
+twist = Twist()
+print twist
 
 # Solve the problem and plot the solution
-problem = Twist()
-u = problem.solve()
+u = twist.solve()
 plot(u)</pre>
 		<p>Notice that the code above only contains information directly pertinent to specification of the mechanics problem. This includes the definition of the computational domain, material model, boundary conditions and body forces. The underlying framework parses this human-readable Python code, automatically performs several steps (including the most tedious one of them all: linearisation of the nonlinear problem) and generates efficient C++ code for finite element computation.</p>
 		<p>When run, we see quadratic convergence of the Newton-Raphson scheme used to solve the nonlinear problem and a pretty solution!</p>
