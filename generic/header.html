@@ -62,28 +62,8 @@
     <link rel="icon" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/images/simula-icon.png" />
     <link rel="alternate" type="application/rss+xml" title="Site evolution log" href="<!--#echo var="MY_DOCUMENT_ROOT"-->/meta/changelog/?rss-log" />
 <!--#if expr="$includemathjax = Yes" -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Register.LoadHook("[MathJax]/jax/output/HTML-CSS/fonts/STIX/fontdata.js", function () {
-      var HTMLCSS = MathJax.OutputJax["HTML-CSS"];
-    
-      MathJax.Hub.Browser.Select({
-        Safari: function (browser) {
-          browser.STIXfontBug = browser.versionAtLeast("5.1") && browser.isMac;
-        },
-        Chrome: function (browser) {
-          var match = navigator.appVersion.match(/AppleWebKit\/(\d+)/);
-          if (match && parseInt(match[1]) > 534) {browser.STIXfontBug = true}
-        }
-      });
-      if (MathJax.Hub.Browser.STIXfontBug) {
-        HTMLCSS.FONTDATA.FONTS["STIXGeneral"].family = "STIXGeneral-Regular";
-        HTMLCSS.FONTDATA.FONTS["STIXGeneral-italic"].family = "STIXGeneral-Italic";
-        delete HTMLCSS.FONTDATA.FONTS["STIXGeneral-italic"].style;
-      }
-    });
-    </script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-beta/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <!--#endif --> 
 
   </head>
