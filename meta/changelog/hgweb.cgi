@@ -7,8 +7,8 @@ import cgitb
 cgitb.enable()
 
 # adjust python path if not a system-wide install:
-#import sys
-#sys.path.insert(0, "/path/to/python/lib")
+import sys
+sys.path.insert(0, "/kunden/homepages/22/d89915628/htdocs/lib/python")
 
 # If you'd like to serve pages with UTF-8 instead of your default
 # locale charset, you can do so by uncommenting the following lines.
@@ -23,6 +23,6 @@ from mercurial.hgweb.request import wsgiapplication
 import mercurial.hgweb.wsgicgi as wsgicgi
 
 def make_web_app():
-    return hgweb("/srl/sh/home-0/harish/www_docs", "site")
+    return hgweb("/kunden/homepages/22/d89915628/htdocs/personal", "site")
 
 wsgicgi.launch(wsgiapplication(make_web_app))

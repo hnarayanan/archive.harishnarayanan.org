@@ -2,7 +2,7 @@ Options +ExecCGI
 AddHandler cgi-script .cgi
 
 RewriteEngine On
-RewriteBase /~harish/meta/changelog/
+RewriteBase /meta/changelog/
 RewriteRule ^$ hgweb.cgi  [L]
 # Send requests for files that exist to those files.
 RewriteCond %{REQUEST_FILENAME} !-f
