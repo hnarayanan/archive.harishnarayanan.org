@@ -1,6 +1,6 @@
 #!/bin/sh
 
-siteroot='http://home.simula.no/~harish/'
+siteroot='http://harishnarayanan.org/'
 echo '<?xml version="1.0" encoding="UTF-8"?>'
 echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
 cd ..

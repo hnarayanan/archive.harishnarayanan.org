@@ -8,8 +8,10 @@ mujournal/gallery.html
 planet/mujournal/identi.ca,*
 planet/mujournal/sources/identi.ca,*
 files/*
+cache/*
 sandbox/flowplayer/*
 *.orig
+sitemap.xml
 
 syntax: regexp
 .*\#.*\#$
