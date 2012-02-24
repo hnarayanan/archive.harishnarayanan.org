@@ -1,28 +1,19 @@
 #!/usr/bin/env python
 #
-# An example CGI script to use hgweb, edit as necessary
+# An example hgweb CGI script, edit as necessary
+# See also http://mercurial.selenic.com/wiki/PublishingRepositories
 
-# send python tracebacks to the browser if an error occurs:
-import cgitb
-cgitb.enable()
+# Path to repo or hgweb config to serve (see 'hg help hgweb')
+config = "/kunden/homepages/22/d89915628/htdocs/personal"
 
-# adjust python path if not a system-wide install:
-import sys
-sys.path.insert(0, "/kunden/homepages/22/d89915628/htdocs/lib/python")
+# Uncomment and adjust if Mercurial is not installed system-wide
+# (consult "installed modules" path from 'hg debuginstall'):
+import sys; sys.path.insert(0, "/kunden/homepages/22/d89915628/htdocs/local/lib/python2.4/site-packages")
 
-# If you'd like to serve pages with UTF-8 instead of your default
-# locale charset, you can do so by uncommenting the following lines.
-# Note that this will cause your .hgrc files to be interpreted in
-# UTF-8 and all your repo files to be displayed using UTF-8.
-#
-#import os
-#os.environ["HGENCODING"] = "UTF-8"
+# Uncomment to send python tracebacks to the browser if an error occurs:
+import cgitb; cgitb.enable()
 
-from mercurial.hgweb.hgweb_mod import hgweb
-from mercurial.hgweb.request import wsgiapplication
-import mercurial.hgweb.wsgicgi as wsgicgi
-
-def make_web_app():
-    return hgweb("/kunden/homepages/22/d89915628/htdocs/personal", "site")
-
-wsgicgi.launch(wsgiapplication(make_web_app))
+from mercurial import demandimport; demandimport.enable()
+from mercurial.hgweb import hgweb, wsgicgi
+application = hgweb(config)
+wsgicgi.launch(application)
