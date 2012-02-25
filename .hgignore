@@ -12,6 +12,8 @@ cache/*
 sandbox/flowplayer/*
 *.orig
 sitemap.xml
+google*
+Bing*
 
 syntax: regexp
 .*\#.*\#$
