@@ -8,5 +8,5 @@ RewriteRule ^$ hgweb.cgi  [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 # Send requests for directories that exist to those directories.
 RewriteCond %{REQUEST_FILENAME} !-d
-# Send requests to hgwebdir.cgi, appending the rest of url.
+# Send requests to hgweb.cgi, appending the rest of url.
 RewriteRule (.*) hgweb.cgi/$1  [QSA,L]
