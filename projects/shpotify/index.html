@@ -3,12 +3,59 @@
               <div id="header">
 		<h1 id="title"><a href=""><!--#echo var="pagetitle" --></a></h1>
 	      </div>
-	      
+
 	      <div id="contents">
 	        <p></p>
-	        <div class="console">
-		foo
-		</div>
+	        <div class="console">megatr0n$ spotify
+------------------------------------
+A command-line interface for Spotify
+------------------------------------
+Usage: spotify <option>
+
+Options:
+ status   = Shows Spotify's status, current artist and track.
+ play     = Start playing Spotify.
+ pause    = Pause Spotify.
+ next     = Go to the next track.
+ prev     = Go to the previous track.
+ vol up   = Increase Spotify's volume by 10%
+ vol down = Increase Spotify's volume by 10%
+ vol #    = Set Spotify' volume to # [0-100]
+ quit     = Quit Spotify.
+
+megatr0n$ spotify play
+Playing Spotify.
+
+megatr0n$ spotify status
+Spotify is currently playing.
+Artist: Kanye West
+Album: Late Registration
+Track: Gold Digger
+
+megatr0n$ spotify vol up
+Changing Spotify volume level.
+
+megatr0n$ spotify pause
+Pausing Spotify.
+
+megatr0n$ spotify status
+Spotify is currently paused.
+
+megatr0n$ spotify play
+Playing Spotify.
+
+megatr0n$ spotify prev
+Going to previous track.
+
+megatr0n$ spotify status
+Spotify is currently playing.
+Artist: Cream
+Album: Disreali Gears
+Track: Tales Of Brave Ulysses
+
+megatr0n$ spotify quit
+Quitting Spotify.
+megatr0n$</div>
 		<p class="right"><a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/projects/">Explore my other projects &#8594;</a></p>
 	      </div>
 
