@@ -1,16 +1,17 @@
-<!--#set var="pagetitle" value="A command-line interface for Spotify!" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
+<!--#set var="pagetitle" value="A command-line interface for Spotify on a Mac" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
 <!--#set var="navigation" value="Projects" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/navigator.html" -->
               <div id="header">
 		<h1 id="title"><a href=""><!--#echo var="pagetitle" --></a></h1>
 	      </div>
 
 	      <div id="contents">
-	        <p></p>
+	        <p>My media centre machine at home is an aging Mac with only one open port: SSH. Since it was getting annoying to have to walk up to it every time I wanted to control Spotify, I wrote <a href="">shpotify.sh</a>, a simple Bash/Apple script that allows me to control Spotify on the media centre remotely from other machines around the house.</p>
+		<p>With it, I can now do the following.</p>
 	        <div class="console">megatr0n$ spotify
 ------------------------------------
 A command-line interface for Spotify
 ------------------------------------
-Usage: spotify <option>
+Usage: spotify  &#60;option&#62;
 
 Options:
  status   = Shows Spotify's status, current artist and track.
@@ -20,7 +21,7 @@ Options:
  prev     = Go to the previous track.
  vol up   = Increase Spotify's volume by 10%
  vol down = Increase Spotify's volume by 10%
- vol #    = Set Spotify' volume to # [0-100]
+ vol #    = Set Spotify's volume to # [0-100]
  quit     = Quit Spotify.
 
 megatr0n$ spotify play
@@ -54,8 +55,8 @@ Album: Disreali Gears
 Track: Tales Of Brave Ulysses
 
 megatr0n$ spotify quit
-Quitting Spotify.
-megatr0n$</div>
+Quitting Spotify.</div>
+                <p><a href="">Download it</a>, and you can too!</p>
 		<p class="right"><a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/projects/">Explore my other projects &#8594;</a></p>
 	      </div>
 
