@@ -5,7 +5,7 @@
 
 # Uncomment and adjust if Mercurial is not installed system-wide
 # (consult "installed modules" path from 'hg debuginstall'):
-import sys; sys.path.insert(0, "/kunden/homepages/22/d89915628/htdocs/local/lib/python2.4/site-packages")
+import sys; sys.path.insert(0, "/kunden/homepages/22/d89915628/htdocs/local/lib/python2.7/site-packages")
 
 # Uncomment to send python tracebacks to the browser if an error occurs:
 # import cgitb; cgitb.enable()
