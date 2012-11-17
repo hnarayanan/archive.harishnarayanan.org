@@ -3,12 +3,9 @@ syntax: glob
 *.pyc
 *.tmplc
 .DS_Store
-mujournal/index.html
 mujournal/gallery.html
-planet/mujournal/identi.ca,*
-planet/mujournal/sources/identi.ca,*
+mujournal/tweets.html
 files/*
-cache/*
 sandbox/flowplayer/*
 *.orig
 sitemap.xml
