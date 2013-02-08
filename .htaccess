@@ -25,3 +25,4 @@ ErrorDocument 403 "Here be dragons. Rawr!"
 RewriteRule ^\+$ https://plus.google.com/100382636415340600164 [L,R=301]
 RewriteRule ^cv.pdf$ /files/cv/cv.pdf [NC,QSA,L]
 RewriteRule ^moments/(.*) /photos/$1 [NC,QSA,L,R=301]
+RewriteRule ^save-the-date.gif$ /files/images/photos/savethedate/save-the-date.gif [NC,QSA,L]
