@@ -1,16 +1,16 @@
 syntax: glob
 *~
+*.orig
 *.pyc
 *.tmplc
 .DS_Store
+files/*
+mujournal/fetch-twitter.py
 mujournal/gallery.html
 mujournal/tweets.html
-files/*
-sandbox/flowplayer/*
-*.orig
 sitemap.xml
-google*
-Bing*
+google*.html
+Bing*.xml
 
 syntax: regexp
 .*\#.*\#$
