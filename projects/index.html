@@ -1,53 +1,57 @@
-<!--#set var="pagetitle" value="Personal project portfolio" --><!--#set var="includefancy" value="Yes" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
+<!--#set var="pagetitle" value="Project portfolio" --><!--#set var="includefancy" value="Yes" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/header.html" -->
 <!--#set var="navigation" value="Projects" --><!--#include virtual="$MY_DOCUMENT_ROOT/generic/navigator.html" -->
               <div id="header">
 		<h1 id="title"><a href=""><!--#echo var="pagetitle" --></a></h1>
 	      </div>
 
 	      <div id="contents">
-		<p>Being a geek, it&#8217;s sometimes hard to separate the <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/research/#software">work I do for my day job</a> as a mathematical physics researcher and the projects I do for fun. But I am going to try, and what follows is an incomplete list of my personal projects, broadly classfied as <a href="#websites">websites</a>, <a href="#software">software projects</a> and <a href="#education">mechanics education</a>. Many of these efforts are open source, so feel free to try them out and do let me know if you&#8217;re interested in contributing to them!</p>
+		<p>Much of my time over the years has been spent merrily making and improving the sorts of <a href="#websites">websites</a> and <a href="#software">software utilities</a> you see on this page. If you&#8217;re interested in learning more about or contributing to any of these projects, I&#8217;d be delighted to hear from you!</p>
 		<h2 id="websites">Sites around the web</h2>
-		<p>I greatly enjoy web design and programming as they satisfy my twin urges for creative expression and technical geekery. Here are some sites I&#8217;ve created over the years.</p>
 		<div class="decorated-gallery">
+		  <div class="gallery-item">
+		    <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/projects/wilderness-embassy/"><img class="gallery-item-image" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/websites/thumbnails/wilderness-embassy.jpg" alt="Wilderness Embassy" /></a>
+		    <div class="gallery-item-description"><a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/projects/wilderness-embassy/">Wilderness Embassy</a></div>
+		    <div class="gallery-item-meta">Ruby on Rails<br />2013 &ndash;</div>
+		  </div>
+		  <div class="gallery-item">
+		    <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/projects/mechanics-academy/"><img class="gallery-item-image" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/websites/thumbnails/mechanics-academy.png" alt="Mechanics Academy thumbnail" /></a>
+		    <div class="gallery-item-description"><a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/projects/mechanics-academy/">Mechanics Academy</a></div>
+		    <div class="gallery-item-meta">Ruby on Rails, Django<br />2012 &ndash;</div>
+		  </div>
 		  <div class="gallery-item">
 		    <a href="http://wisdemy.com/"><img class="gallery-item-image" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/websites/thumbnails/wisdemy.png" alt="Wisdemy thumbnail" /></a>
 		    <div class="gallery-item-description"><a href="http://wisdemy.com/">Wisdemy</a></div>
-		    <div class="gallery-item-meta">WordPress, PHP<br />2012&ndash;</div>
-		  </div>
-		  <div class="gallery-item">
-		    <a href="http://mechanicsacademy.org/"><img class="gallery-item-image" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/websites/thumbnails/mechanicsacademy.png" alt="Mechanics Academy thumbnail" /></a>
-		    <div class="gallery-item-description"><a href="http://mechanicsacademy.org/">Mechanics Academy</a></div>
-		    <div class="gallery-item-meta">WordPress, Adaptive, PHP<br />2011&ndash;</div>
+		    <div class="gallery-item-meta">WordPress<br />2012 &ndash;</div>
 		  </div>
 		  <div class="gallery-item">
 		    <a href="http://camowiki.simula.no/"><img class="gallery-item-image" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/websites/thumbnails/camowiki.png" alt="Camowiki thumbnail" /></a>
 		    <div class="gallery-item-description"><a href="http://camowiki.simula.no/">Cardiac&nbsp;Modelling<br/>Group Wiki</a></div>
-		    <div class="gallery-item-meta">MediaWiki, PHP<br />2011&ndash;</div>
+		    <div class="gallery-item-meta">MediaWiki<br />2011 &ndash;</div>
 		  </div>
 		  <div class="gallery-item">
 		    <a href="http://fenicsproject.org/"><img class="gallery-item-image" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/websites/thumbnails/fenicsproject.png" alt="FEniCS Project thumbnail" /></a>
 		    <div class="gallery-item-description"><a href="http://fenicsproject.org/">FEniCS Project</a></div>
-		    <div class="gallery-item-meta">Sphinx, Python<br />2010&ndash;</div>
+		    <div class="gallery-item-meta">Sphinx<br />2010 &ndash;</div>
 		  </div>
 		  <div class="gallery-item">
-		    <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/"><img class="gallery-item-image" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/websites/thumbnails/simula.png" alt="Professional Website thumbnail" /></a>
-		    <div class="gallery-item-description"><a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/">Professional<br/>Website</a></div>
-		    <div class="gallery-item-meta">Apache SSI, Bash, Python<br />2008&ndash;</div>
+		    <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/"><img class="gallery-item-image" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/websites/thumbnails/personal-website.png" alt="Personal Website thumbnail" /></a>
+		    <div class="gallery-item-description"><a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/">Personal<br/>Website (v3)</a></div>
+		    <div class="gallery-item-meta">Apache SSI, Python, Bash<br />2008 &ndash;</div>
 		  </div>
 		  <div class="gallery-item">
 		    <a href="http://comp-phys.engin.umich.edu/"><img class="gallery-item-image" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/websites/thumbnails/comp-phys.png" alt="Computational Physics Group thumbnail" /></a>
 		    <div class="gallery-item-description"><a href="http://comp-phys.engin.umich.edu/">Computational<br /> Physics Group</a></div>
-		    <div class="gallery-item-meta">MediaWiki, PHP<br />2007&ndash;</div>
+		    <div class="gallery-item-meta">MediaWiki<br />2007 &ndash;</div>
 		  </div>
 		  <div class="gallery-item">
 		    <a href="http://delineate.wahgnube.org/"><img class="gallery-item-image" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/websites/thumbnails/delineate.png" alt="Delineate thumbnail" /></a>
 		    <div class="gallery-item-description"><a href="http://delineate.wahgnube.org/">Photo Journal</a></div>
-		    <div class="gallery-item-meta">WordPress, PHP<br />2004&ndash;2008</div>
+		    <div class="gallery-item-meta">WordPress<br />2004 &ndash; 2008</div>
 		  </div>
 		  <div class="gallery-item">
 		    <a href="http://emphaticallystatic.org/"><img class="gallery-item-image" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/websites/thumbnails/actuality.log.png" alt="actuality.log thumbnail" /></a>
 		    <div class="gallery-item-description"><a href="http://emphaticallystatic.org/">Personal Journal</a></div>
-		    <div class="gallery-item-meta">WordPress, PHP<br />2002&ndash;</div>
+		    <div class="gallery-item-meta">WordPress<br />2002 &ndash;</div>
 		  </div>
 		</div>
 		<br style="clear:both;" />
@@ -149,10 +153,5 @@
 		  </div>
 		</div>
 		<br style="clear:both;" />
-		<h2 id="education">Mechanics education</h2>
-		<a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/education/bamboo-macbook-pro.jpg"><img class="centered-photo" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/files/images/projects/education/bamboo-macbook-pro.small.jpg" alt="Recording my first lectures on computational biomechanics" title="Recording my first lectures on computational biomechanics" /></a>
-		<p class="caption">Recording my first lectures on computational biomechanics.</p>
-		<p>I love to teach. I&#8217;ve been <a href="<!--#echo var="MY_DOCUMENT_ROOT"-->/writing/harmonising-whistleblowing/">repeatedly told</a> I&#8217;m a good teacher. I greatly enjoy making websites. I don&#8217;t know why it took me so long to connect these dots, but from that recent connection was born <a href="http://mechanicsacademy.org/">Mechanics Academy</a>.</p>
-		<p>Mechanics Academy is a website for disseminating university-level lectures on topics I care about. These primarily include continuum mechanics theory, its application to mathematical biology and the numerical methods involved in solving the equations arising from the theory. The effort is greatly inspired by how much I&#8217;ve learnt from other virtual learning projects around the web. Prominent examples of these are <a href="http://www.khanacademy.org/">Khan Academy</a>, MIT&#8217;s <a href="http://ocw.mit.edu/">OpenCourseWare</a> and Stanford&#8217;s <a href="http://www.stanford.edu/class/cs193p/cgi-bin/drupal/">iPhone Application Development</a>, <a href="https://www.ai-class.com/">Artificial Intelligence</a> and <a href="http://www.ml-class.org/">Machine Learning</a> classes. Each of these projects serve their respective niches very well, and Mechanics Academy hopes to be a similarly valuable resource for university students aiming to learn mechanics.</p>
 	      </div>
 <!--#include virtual="$MY_DOCUMENT_ROOT/generic/footer.html" -->
