@@ -1,3 +1,7 @@
+/sandbox
+
+* Find a better home for the content in scratch.html, or delete
+
 /files
 
 * Standardise layout of images for projects, following research images
@@ -20,8 +24,6 @@
   - Fetch twitter
   - Simplicity
   - (Cleaned up) R data imputation+pooling scripts, bootstrapping etc.
-
-* Move commented-out list of outdated Simplicity users to a separate location
 
 * Think about an art section? (Wedding collage etc.) and point to photography/videography somehow?
 
