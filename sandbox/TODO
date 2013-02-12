@@ -14,13 +14,18 @@
 
 /projects
 
+* Upload the following to GitHub, along with a README and link to from the site
+  - Body tracking
+  - Transformations
+  - Fetch twitter
+  - Simplicity
+  - (Cleaned up) R data imputation+pooling scripts, bootstrapping etc.
+
+* Move commented-out list of outdated Simplicity users to a separate location
+
 * Think about an art section? (Wedding collage etc.) and point to photography/videography somehow?
 
 * Add sketches for Indian Photographers
-
-* Clean up and upload R data imputation+pooling scripts, bootstrapping etc. to GitHub and link from site
-
-* Move commented-out list of outdated Simplicity users to a separate location
 
 /photos
 
