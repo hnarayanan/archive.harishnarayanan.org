@@ -1,6 +1,11 @@
+/
+
+* Catalogue online course results in a visually appealing way---and
+  tie it to uni coursework/other things like Michael Alley stuff?
+
 /sandbox
 
-* Find a better home for the content in scratch.html, or delete
+* Find a better home for the content in scratch.html, or delete it
 
 /files
 
@@ -10,7 +15,8 @@
 
 * Make recent results image a bit more dynamic
 
-* Make the 'Explore my other research areas' link part of a common include and hide while printing
+* Make the 'Explore my other research areas' link part of a common
+  include and hide while printing
 
 * Update the following pages to reflect new results and understanding
   - Chondrocyte model
@@ -18,14 +24,18 @@
 
 /projects
 
-* Upload the following to GitHub, along with a README and link to from the site
+* Upload the following to GitHub, along with a README and link to from
+  the site
   - Body tracking
   - Transformations
   - Fetch twitter
   - Simplicity
   - (Cleaned up) R data imputation+pooling scripts, bootstrapping etc.
 
-* Think about an art section? (Wedding collage etc.) and point to photography/videography somehow?
+* Highlight Mechanics Academy more prominently
+
+* Think about an art section? (Wedding collage etc.) and point to
+  photography/videography somehow?
 
 * Add sketches for Indian Photographers
 
