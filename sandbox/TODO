@@ -1,3 +1,7 @@
+/files
+
+* Standardise layout of images for projects, following research images
+
 /research
 
 * Make recent results image a bit more dynamic
@@ -15,6 +19,8 @@
 * Add sketches for Indian Photographers
 
 * Clean up and upload R data imputation+pooling scripts, bootstrapping etc. to GitHub and link from site
+
+* Move commented-out list of outdated Simplicity users to a separate location
 
 /photos
 
