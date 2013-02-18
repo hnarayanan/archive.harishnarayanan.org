@@ -27,5 +27,5 @@ RewriteRule ^moments/(.*) /photos/$1 [NC,QSA,L,R=301]
 
 RewriteRule ^cv.pdf$ /files/cv/cv.pdf [NC,QSA,L]
 RewriteRule ^resume-webdev.pdf$ /files/cv/resume-webdev.pdf [NC,QSA,L]
-RewriteRule ^save-the-date.gif$ /files/images/photos/savethedate/save-the-date.gif [NC,QSA,L]
+RewriteRule ^save-the-date.gif$ /files/images/photos/savethedate/save-the-date-small.gif [NC,QSA,L]
 
