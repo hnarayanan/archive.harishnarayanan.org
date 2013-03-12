@@ -5,11 +5,11 @@
               </div>
 
               <div id="contents">
-		<h2>This isn't really hard drive or distribution dependent, though.</h2>
+		<h2>This isn&#8217;t really hard drive or distribution dependent, though.</h2>
 		<p>1. Boot into Fedora, as usual.</p>
-		<p>2. Unpack your Maxtor OneTouch External Hard Drive, plug it into the nearest power socket and connect it to the computer using the provided USB cable. (I didn't try the FireWire option, yet.)</p>
-		<p>3. You can "feel" that your computer recognizes something else is in its presence. Just to make sure anyway, you run:</p>
-		<div class="console">[hnarayan&#64;localhost hnarayan]$ dmesg | tail
+		<p>2. Unpack your Maxtor OneTouch External Hard Drive, plug it into the nearest power socket and connect it to the computer using the provided USB cable. (I didn&#8217;t try the FireWire option, yet.)</p>
+		<p>3. You can &#8220;feel&#8221; that your computer recognizes something else is in its presence. Just to make sure anyway, you run:</p>
+		<div class="console">[harish&#64;localhost hnarayan]$ dmesg | tail
 scsi0 : SCSI emulation for USB Mass Storage devices
   Vendor: Maxtor    Model: OneTouch          Rev: 0201
   Type:   Direct-Access                      ANSI SCSI revision: 02
@@ -20,19 +20,19 @@ SCSI device sda: 490232832 512-byte hdwr sectors (250999 MB)
 sda: assuming drive cache: write through
  sda: sda1
 Attached scsi disk sda at scsi0, channel 0, id 0, lun 0</div>
-		<p>Voila! It sees it and all looks well. If you get a different output, don't panic yet, just type:</p>
-		<div class="console">[hnarayan&#64;localhost hnarayan]$ dmesg | grep Maxtor
+		<p>Voila! It sees it and all looks well. If you get a different output, don&#8217;t panic yet, just type:</p>
+		<div class="console">[harish&#64;localhost hnarayan]$ dmesg | grep Maxtor
   Vendor: Maxtor    Model: OneTouch          Rev: 0201</div>
-		<p>If you see this, just run the <tt>dmesg</tt> command on its own and scroll through looking carefully to where a section similar to the one above shows up. If nothing of this sort shows up, unplug, plug back in, and repeat the command. If it still doesn't show up, you're probably screwed. Or you're doing something stupid, like not turning on the power somewhere.</p>
+		<p>If you see this, just run the <tt>dmesg</tt> command on its own and scroll through looking carefully to where a section similar to the one above shows up. If nothing of this sort shows up, unplug, plug back in, and repeat the command. If it still doesn&#8217;t show up, you&#8217;re probably screwed. Or you&#8217;re doing something stupid, like not turning on the power somewhere.</p>
 		<p>4. In the previous step, note what it says in the second last line, <tt>sda: sda1</tt>. This just means the new hard disk is going to be referred to as <tt>/dev/sda1</tt>, in computer-speak. Good, so you then type (replacing <tt>sda1</tt> below with what you saw in your output):</p>
-		<div class="console">[hnarayan&#64;localhost hnarayan]$ su
+		<div class="console">[harish&#64;localhost hnarayan]$ su
 Password:
 [root&#64;localhost hnarayan]# /sbin/fdisk /dev/sda1</div>
 		<div class="comment">
-		  <img width="32px" height="32px" src="images/icons/darkgrey/emblem-important.png" alt="Warning icon" title="Warning" />
-		  I just received an e-mail informing me that you ought to work with <tt>/dev/sda</tt> rather than  <tt>/dev/sda1</tt> when using <tt>fdisk</tt>. Otherwise, you end up with partitions named <tt>sda1p1</tt> and so on if you're creating multiple partitions, which don't have nodes. And that's not pleasant.
+		  <img width="32px" height="32px" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/layout/images/icons/darkgrey/emblem-important.png" alt="Warning icon" title="Warning" />
+		  I just received an e-mail informing me that you ought to work with <tt>/dev/sda</tt> rather than  <tt>/dev/sda1</tt> when using <tt>fdisk</tt>. Otherwise, you end up with partitions named <tt>sda1p1</tt> and so on if you&#8217;re creating multiple partitions, which don&#8217;t have nodes. And that&#8217;s not pleasant.
 		</div>
-		<p>And you're in fdisk. There are a lot of things one could possibly do in fdisk (type 'm' followed by enter to see different options), but we'll stick to the basics.</p>
+		<p>And you&#8217;re in fdisk. There are a lot of things one could possibly do in fdisk (type 'm' followed by enter to see different options), but we&#8217;ll stick to the basics.</p>
 		<p>5. First, we print the existing partition table ('p') to get this wonderful output.</p>
 		<div class="console">     Device Boot    Start         End      Blocks   Id  System
 /dev/sda1p1   ?    120513      235786   925929529+  68  Unknown
@@ -43,12 +43,12 @@ Partition 2 does not end on cylinder boundary.
 Partition 3 does not end on cylinder boundary.
 /dev/sda1p4   ?     86812       86813       10668+  49  Unknown
 Partition 4 does not end on cylinder boundary.</div>
-		<p>For reasons best known to them, drive manufacturers seem to like to pre-partition drives in these and other weird sorts of ways. Anyway, all we're going to do is delete them with the 'd' key. So you go 'd', delete partition 1, 'd' delete partition '2' and so on, until you've removed all 4. Now if you hit 'p', you get the nice blank output below.</p>
+		<p>For reasons best known to them, drive manufacturers seem to like to pre-partition drives in these and other weird sorts of ways. Anyway, all we&#8217;re going to do is delete them with the 'd' key. So you go 'd', delete partition 1, 'd' delete partition '2' and so on, until you&#8217;ve removed all 4. Now if you hit 'p', you get the nice blank output below.</p>
 		<div class="console">     Device Boot      Start         End      Blocks   Id  System</div>
 		<p>6. Good, now that this is an empty drive, we say 'n' and create a new primary partition. Just hit enter when it asks you about start and end blocks, as it will pick the defaults and fill the drive. Which is what I want. It will also default it to a "Linux partition" (83), and then hitting 'p' to verify this yields the output that follows.</p>
 		<div class="console">     Device Boot      Start         End      Blocks   Id  System
 /dev/sda1p1               1       30514   245103673+  83  Linux</div>
-		<p>7. Everything seems in order. Now we hit 'w' to write this partition table to the drive. When I did this, it complained about not being able to write this cleanly in memory, or something. No matter, shut down the machine, <strong>remove the drive</strong> and reboot as usual. Plug it in, and then do the <tt>dmesg</tt> thing again for good measure, if you're the careful sorts. Anyway, you then run (as <tt>root</tt>):</p>
+		<p>7. Everything seems in order. Now we hit 'w' to write this partition table to the drive. When I did this, it complained about not being able to write this cleanly in memory, or something. No matter, shut down the machine, <strong>remove the drive</strong> and reboot as usual. Plug it in, and then do the <tt>dmesg</tt> thing again for good measure, if you&#8217;re the careful sorts. Anyway, you then run (as <tt>root</tt>):</p>
 		<div class="console">[root&#64;localhost hnarayan]# /sbin/mkfs -t ext2 -j /dev/sda1
 mke2fs 1.35 (28-Feb-2004)
 Filesystem label=
@@ -64,26 +64,26 @@ First data block=0
 Superblock backups stored on blocks:
         32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632,
 	2654208, 4096000, 7962624, 11239424, 20480000, 23887872
- 
+
 Writing inode tables: done
 Creating journal (8192 blocks): done
 Writing superblocks and filesystem accounting information: done
- 
+
 This filesystem will be automatically checked every 23 mounts or
 180 days, whichever comes first.  Use tune2fs -c or -i to override.</div>
-		<p>And grab yourself a cup of coffee (or two) while you're idling waiting for it to finish formatting the drive with a spanking new <tt>ext3</tt> partition.</p>
-		<p>8. Back so soon? Now that it's done, we proceed to mount the drive to some nice sounding location (<tt>/mnt/external/</tt>) to be able to use it in the future.</p>
+		<p>And grab yourself a cup of coffee (or two) while you&#8217;re idling waiting for it to finish formatting the drive with a spanking new <tt>ext3</tt> partition.</p>
+		<p>8. Back so soon? Now that it&#8217;s done, we proceed to mount the drive to some nice sounding location (<tt>/mnt/external/</tt>) to be able to use it in the future.</p>
 		<div class="console">[root&#64;localhost hnarayan]# mkdir /mnt/external
 [root&#64;localhost hnarayan]# mount /dev/sda1 /mnt/external</div>
 		<p>9. Again, just for good measure, we type</p>
-		<div class="console">[hnarayan&#64;localhost hnarayan]$ df -h
+		<div class="console">[harish&#64;localhost hnarayan]$ df -h
 Filesystem            Size  Used Avail Use% Mounted on
 /dev/hda3             6.0G  5.6G  126M  98% /
 none                  253M     0  253M   0% /dev/shm
 /dev/hda2              49G   48G 1003M  98% /mnt/windows
 /dev/sda1             231G   33M  219G   1% /mnt/external</div>
-		<p>That's it, you can now use <tt>/mnt/external/</tt> as any other directory. Of course, if you'd like to use it as a regular user (not <tt>root</tt>), you need to create a directory within it and assign the appropriate permissions using <tt>chown</tt>.</p>
-		<p>10. The only thing to remember here is, up to now we've not done anything to get it to 'automount' on the next and subsequent boots (if you're keeping the external drive plugged in at all times) or mount it when it is plugged in. For this, you add the last line in the following to your <tt>/etc/fstab</tt>.</p>
+		<p>That&#8217;s it, you can now use <tt>/mnt/external/</tt> as any other directory. Of course, if you&#8217;d like to use it as a regular user (not <tt>root</tt>), you need to create a directory within it and assign the appropriate permissions using <tt>chown</tt>.</p>
+		<p>10. The only thing to remember here is, up to now we&#8217;ve not done anything to get it to 'automount' on the next and subsequent boots (if you&#8217;re keeping the external drive plugged in at all times) or mount it when it is plugged in. For this, you add the last line in the following to your <tt>/etc/fstab</tt>.</p>
 		<div class="console">LABEL=/        /                  ext3    defaults        1 1
 none           /dev/pts           devpts  gid=5,mode=620  0 0
 none           /dev/shm           tmpfs   defaults        0 0
@@ -94,9 +94,10 @@ none           /sys               sysfs   defaults        0 0
 /dev/fd0       /mnt/floppy        auto    noauto,owner,kudzu 0 0
 /dev/hda2      /mnt/windows       ntfs    ro,umask=0222
 /dev/sda1      /mnt/external      ext3    rw,noauto,user  1 0</div>
-		<p>With this, it's set up so that, when you plug the drive in, you can mount (and later unmount) by typing the following.</p>
+		<p>With this, it&#8217;s set up so that, when you plug the drive in, you can mount (and later unmount) by typing the following.</p>
 		<div class="console">[hnarayan@localhost hnarayan]$ mount /mnt/external/
 [hnarayan@localhost hnarayan]$ umount /mnt/external/</div>
-		<p>And that's it for real, I guess. Visit <a href="http://emphaticallystatic.org/">actuality.log</a> for more.</p>
+		<p>And that&#8217;s it for real, I guess.</p>
+ 		<p class="right"><a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/writing/">Read more things I&#8217;ve written &#8594;</a></p>
 	      </div>
 <!--#include virtual="$MY_DOCUMENT_ROOT/generic/footer.html" -->
