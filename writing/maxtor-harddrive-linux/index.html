@@ -9,7 +9,7 @@
 		<p>1. Boot into Fedora, as usual.</p>
 		<p>2. Unpack your Maxtor OneTouch External Hard Drive, plug it into the nearest power socket and connect it to the computer using the provided USB cable. (I didn&#8217;t try the FireWire option, yet.)</p>
 		<p>3. You can &#8220;feel&#8221; that your computer recognizes something else is in its presence. Just to make sure anyway, you run:</p>
-		<div class="console">[harish&#64;localhost hnarayan]$ dmesg | tail
+		<div class="console">[harish&#64;localhost harish]$ dmesg | tail
 scsi0 : SCSI emulation for USB Mass Storage devices
   Vendor: Maxtor    Model: OneTouch          Rev: 0201
   Type:   Direct-Access                      ANSI SCSI revision: 02
@@ -21,13 +21,13 @@ sda: assuming drive cache: write through
  sda: sda1
 Attached scsi disk sda at scsi0, channel 0, id 0, lun 0</div>
 		<p>Voila! It sees it and all looks well. If you get a different output, don&#8217;t panic yet, just type:</p>
-		<div class="console">[harish&#64;localhost hnarayan]$ dmesg | grep Maxtor
+		<div class="console">[harish&#64;localhost harish]$ dmesg | grep Maxtor
   Vendor: Maxtor    Model: OneTouch          Rev: 0201</div>
 		<p>If you see this, just run the <tt>dmesg</tt> command on its own and scroll through looking carefully to where a section similar to the one above shows up. If nothing of this sort shows up, unplug, plug back in, and repeat the command. If it still doesn&#8217;t show up, you&#8217;re probably screwed. Or you&#8217;re doing something stupid, like not turning on the power somewhere.</p>
 		<p>4. In the previous step, note what it says in the second last line, <tt>sda: sda1</tt>. This just means the new hard disk is going to be referred to as <tt>/dev/sda1</tt>, in computer-speak. Good, so you then type (replacing <tt>sda1</tt> below with what you saw in your output):</p>
-		<div class="console">[harish&#64;localhost hnarayan]$ su
+		<div class="console">[harish&#64;localhost harish]$ su
 Password:
-[root&#64;localhost hnarayan]# /sbin/fdisk /dev/sda1</div>
+[root&#64;localhost harish]# /sbin/fdisk /dev/sda1</div>
 		<div class="comment">
 		  <img width="32px" height="32px" src="<!--#echo var="MY_DOCUMENT_ROOT"-->/layout/images/icons/darkgrey/emblem-important.png" alt="Warning icon" title="Warning" />
 		  I just received an e-mail informing me that you ought to work with <tt>/dev/sda</tt> rather than  <tt>/dev/sda1</tt> when using <tt>fdisk</tt>. Otherwise, you end up with partitions named <tt>sda1p1</tt> and so on if you&#8217;re creating multiple partitions, which don&#8217;t have nodes. And that&#8217;s not pleasant.
@@ -49,7 +49,7 @@ Partition 4 does not end on cylinder boundary.</div>
 		<div class="console">     Device Boot      Start         End      Blocks   Id  System
 /dev/sda1p1               1       30514   245103673+  83  Linux</div>
 		<p>7. Everything seems in order. Now we hit 'w' to write this partition table to the drive. When I did this, it complained about not being able to write this cleanly in memory, or something. No matter, shut down the machine, <strong>remove the drive</strong> and reboot as usual. Plug it in, and then do the <tt>dmesg</tt> thing again for good measure, if you&#8217;re the careful sorts. Anyway, you then run (as <tt>root</tt>):</p>
-		<div class="console">[root&#64;localhost hnarayan]# /sbin/mkfs -t ext2 -j /dev/sda1
+		<div class="console">[root&#64;localhost harish]# /sbin/mkfs -t ext2 -j /dev/sda1
 mke2fs 1.35 (28-Feb-2004)
 Filesystem label=
 OS type: Linux
@@ -73,10 +73,10 @@ This filesystem will be automatically checked every 23 mounts or
 180 days, whichever comes first.  Use tune2fs -c or -i to override.</div>
 		<p>And grab yourself a cup of coffee (or two) while you&#8217;re idling waiting for it to finish formatting the drive with a spanking new <tt>ext3</tt> partition.</p>
 		<p>8. Back so soon? Now that it&#8217;s done, we proceed to mount the drive to some nice sounding location (<tt>/mnt/external/</tt>) to be able to use it in the future.</p>
-		<div class="console">[root&#64;localhost hnarayan]# mkdir /mnt/external
-[root&#64;localhost hnarayan]# mount /dev/sda1 /mnt/external</div>
+		<div class="console">[root&#64;localhost harish]# mkdir /mnt/external
+[root&#64;localhost harish]# mount /dev/sda1 /mnt/external</div>
 		<p>9. Again, just for good measure, we type</p>
-		<div class="console">[harish&#64;localhost hnarayan]$ df -h
+		<div class="console">[harish&#64;localhost harish]$ df -h
 Filesystem            Size  Used Avail Use% Mounted on
 /dev/hda3             6.0G  5.6G  126M  98% /
 none                  253M     0  253M   0% /dev/shm
@@ -95,8 +95,8 @@ none           /sys               sysfs   defaults        0 0
 /dev/hda2      /mnt/windows       ntfs    ro,umask=0222
 /dev/sda1      /mnt/external      ext3    rw,noauto,user  1 0</div>
 		<p>With this, it&#8217;s set up so that, when you plug the drive in, you can mount (and later unmount) by typing the following.</p>
-		<div class="console">[hnarayan@localhost hnarayan]$ mount /mnt/external/
-[hnarayan@localhost hnarayan]$ umount /mnt/external/</div>
+		<div class="console">[harish@localhost harish]$ mount /mnt/external/
+[harish@localhost harish]$ umount /mnt/external/</div>
 		<p>And that&#8217;s it for real, I guess.</p>
  		<p class="right"><a href="<!--#echo var="MY_DOCUMENT_ROOT" -->/writing/">Read more things I&#8217;ve written &#8594;</a></p>
 	      </div>
