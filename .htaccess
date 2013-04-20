@@ -6,6 +6,9 @@ RewriteEngine on
 RewriteCond %{HTTP_USER_AGENT} ((.*MSIE.*)|(Lynx.*))
 RewriteCond %{REQUEST_URI} \.html$
 RewriteRule .* - [T=text/html]
+RewriteCond %{HTTP_HOST} ^(www\.)?harishnarayanan\.net [OR,NC]
+RewriteCond %{HTTP_HOST} ^www\.harishnarayanan\.org [NC]
+RewriteRule (.*) http://harishnarayanan.org/$1 [R=301,L]
 
 <IfModule mod_expires.c>
 ExpiresActive on
@@ -27,5 +30,6 @@ RewriteRule ^moments/(.*) /photos/$1 [NC,QSA,L,R=301]
 
 RewriteRule ^cv.pdf$ /files/cv/cv.pdf [NC,QSA,L]
 RewriteRule ^resume-webdev.pdf$ /files/cv/resume-webdev.pdf [NC,QSA,L]
+RewriteRule ^resume.pdf$ /files/cv/resume.pdf [NC,QSA,L]
 RewriteRule ^save-the-date.gif$ /files/images/photos/savethedate/save-the-date-small.gif [NC,QSA,L]
 
