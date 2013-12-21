@@ -8,6 +8,7 @@ files/*
 mujournal/fetch-twitter.py
 mujournal/gallery.html
 mujournal/tweets.html
+projects/memory_lane
 sitemap.xml
 google*.html
 Bing*.xml
