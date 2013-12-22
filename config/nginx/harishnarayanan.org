@@ -1,0 +1,30 @@
+server {
+  listen 80;
+  server_name www.harishnarayanan.org .harishnarayanan.net;
+  rewrite ^/(.*) http://harishnarayanan.org/$1 permanent;
+}
+
+server {
+  listen 80;
+  server_name harishnarayanan.org;
+
+  access_log /home/ubuntu/sites/harishnarayanan.org/logs/nginx/access.log;
+  error_log /home/ubuntu/sites/harishnarayanan.org/logs/nginx/error.log;
+
+  charset utf-8;
+  client_max_body_size 75M;
+
+  location /cv.pdf {
+    root /home/ubuntu/sites/harishnarayanan.org/files/cv;
+  }
+
+  location /resume.pdf {
+    root /home/ubuntu/sites/harishnarayanan.org/files/cv;
+  }
+
+  location / {
+    ssi on;
+    set $MY_DOCUMENT_ROOT "";
+    root /home/ubuntu/sites/harishnarayanan.org;
+  }
+}
