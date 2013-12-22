@@ -5,11 +5,12 @@ syntax: glob
 *.tmplc
 .DS_Store
 files/*
-venv/*
+logs/*
 mujournal/fetch-twitter.py
 mujournal/gallery.html
 mujournal/tweets.html
 projects/memory_lane
+venv/*
 sitemap.xml
 google*.html
 Bing*.xml
