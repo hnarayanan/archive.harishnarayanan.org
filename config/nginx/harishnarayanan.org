@@ -25,6 +25,8 @@ server {
   location / {
     ssi on;
     set $MY_DOCUMENT_ROOT "";
+    gzip_static on;
+    expires max;
     root /home/ubuntu/sites/harishnarayanan.org;
   }
 }
