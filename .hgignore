@@ -5,6 +5,7 @@ syntax: glob
 *.tmplc
 .DS_Store
 files/*
+venv/*
 mujournal/fetch-twitter.py
 mujournal/gallery.html
 mujournal/tweets.html
