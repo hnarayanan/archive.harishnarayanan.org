@@ -1,12 +1,34 @@
 server {
-  listen 80;
-  server_name www.harishnarayanan.org .harishnarayanan.net;
-  rewrite ^/(.*) http://harishnarayanan.org/$1 permanent;
+  server_name www.harishnarayanan.org;
+
+  ssl_certificate /home/ubuntu/sites/harishnarayanan.org/config/ssl/harishnarayanan.org.crt;
+  ssl_certificate_key /home/ubuntu/sites/harishnarayanan.org/config/ssl/harishnarayanan.org.key;
+
+  listen *:80;
+  listen *:443 ssl spdy;
+  listen [::]:80;
+  listen [::]:443 ssl spdy;
+
+  return 301 https://harishnarayanan.org$request_uri;
 }
 
 server {
-  listen 80;
   server_name harishnarayanan.org;
+
+  listen *:80;
+  listen [::]:80;
+
+  return 301 https://harishnarayanan.org$request_uri;
+}
+
+server {
+  server_name harishnarayanan.org;
+
+  ssl_certificate /home/ubuntu/sites/harishnarayanan.org/config/ssl/harishnarayanan.org.crt;
+  ssl_certificate_key /home/ubuntu/sites/harishnarayanan.org/config/ssl/harishnarayanan.org.key;
+
+  listen *:443 ssl spdy;
+  listen [::]:443 ipv6only=on ssl spdy;
 
   access_log /home/ubuntu/sites/harishnarayanan.org/logs/nginx/access.log;
   error_log /home/ubuntu/sites/harishnarayanan.org/logs/nginx/error.log;
