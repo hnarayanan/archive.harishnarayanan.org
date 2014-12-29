@@ -1,3 +1,5 @@
+server_tokens off;
+
 server {
   server_name www.harishnarayanan.org;
 
@@ -35,6 +37,21 @@ server {
 
   charset utf-8;
   client_max_body_size 75M;
+
+  add_header Strict-Transport-Security 'max-age=31536000';
+
+  ssl_prefer_server_ciphers on;
+  ssl_ciphers 'kEECDH+ECDSA+AES128 kEECDH+ECDSA+AES256 kEECDH+AES128 kEECDH+AES256 kEDH+AES128 kEDH+AES256 DES-CBC3-SHA +SHA !aNULL !eNULL !LOW !MD5 !EXP !DSS !PSK !SRP !kECDH !CAMELLIA !RC4 !SEED';
+  ssl_protocols TLSv1.2 TLSv1.1 TLSv1;
+
+  spdy_headers_comp 0;
+
+  ssl_dhparam /home/ubuntu/sites/harishnarayanan.org/config/ssl/harishnarayanan.org.pem;
+
+  ssl_session_cache   shared:SSL:10m;
+  ssl_session_timeout 10m;
+
+  ssl_buffer_size 1400;
 
   location /cv.pdf {
     root /home/ubuntu/sites/harishnarayanan.org/files/cv;
