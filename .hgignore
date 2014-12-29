@@ -4,6 +4,7 @@ syntax: glob
 *.pyc
 *.tmplc
 .DS_Store
+config/ssl/*
 files/*
 logs/*
 mujournal/fetch-twitter.py
