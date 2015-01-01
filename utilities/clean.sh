@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-rm `find /kunden/homepages/22/d89915628/htdocs/personal/ -name '*~' | xargs`
-rm `find /kunden/homepages/22/d89915628/htdocs/personal/ -name '*pyc' | xargs`
+rm `find /home/ubuntu/sites/harishnarayanan.org/ -name '*~' | xargs`
+rm `find /home/ubuntu/sites/harishnarayanan.org/ -name '*pyc' | xargs`
