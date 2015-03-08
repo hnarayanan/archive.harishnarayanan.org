@@ -250,7 +250,12 @@ h1 a {
 }
 
 a {
+    color: #1EAEDB;
     text-decoration: none;
+}
+
+a:hover {
+    color: #0FA0CE;
 }
 
 img.centered-photo {
