@@ -301,9 +301,18 @@ ol.writing li {
     margin-bottom: 1.0em;
 }
 
-
-
-
+div.console {
+    background-color: #333;
+    border: solid 1px #999;
+    color: #eee;
+    font-family: "Andale Mono", Courier, Monospace;
+    font-size: 90%;
+    line-height: 150%;
+    margin-bottom: 1.4em;
+    padding: .6em 1em;
+    white-space: pre;
+    max-width: 100%;
+}
 
 /* ==========================================================================
    Helper classes
