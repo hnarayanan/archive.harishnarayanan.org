@@ -234,7 +234,9 @@ img.gallery-item-image {
     margin-bottom: 1.5em;
 }
 
-
+address {
+    font-style: normal;
+}
 
 
 
