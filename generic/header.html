@@ -17,22 +17,8 @@
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
-
-    <!--#if expr="$includefancy = Yes" -->
-    <script src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/FancyZoom.js"></script>
-    <script src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/FancyZoomHTML.js"></script>
-    <!--#endif -->
-    <!--#if expr="$includejquery = Yes" -->
-    <script src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/jquery.js"></script>
-    <script>
-      $(document).ready(function(){
-        $("div.hideable").hide();
-        $("a.showhide").click(function () {
-        $("div.hideable").slideToggle(400);});
-      });
-    </script>
-    <!--#endif -->
     <!--#if expr="$includefeed = Yes" -->
     <link rel="alternate" href="https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=copingbear" type="application/rss+xml" title="RSS feed for Harish's microjournal">
     <!--#endif -->
