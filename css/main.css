@@ -225,6 +225,23 @@ textarea {
     color: #33C3F0; }
 }
 
+/*
+ * Tables
+ */
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+}
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
