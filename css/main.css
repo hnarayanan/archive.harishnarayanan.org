@@ -92,11 +92,13 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Styles from Skeleton
    ========================================================================== */
 
-/* Grid
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+ * Grid
+ */
+
 .container {
   position: relative;
   width: 100%;
@@ -188,7 +190,10 @@ textarea {
 
 }
 
-/* Navbar */
+/*
+ * Navbar
+ */
+
   .navbar + .docs-section {
     border-top-width: 0; }
   .navbar,
@@ -231,7 +236,9 @@ textarea {
   .has-docked-nav .navbar > .container {
     width: 80%; }
 
-
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
 
 body {
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -243,10 +250,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     margin-bottom: -0.2em;
-}
-
-h1 a {
-    color: #222;
 }
 
 a {
