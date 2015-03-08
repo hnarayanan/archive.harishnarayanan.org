@@ -1,82 +1,58 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+<html class="no-js" lang="">
 
   <head>
-
-    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
-    <meta http-equiv="Content-Language" content="en-GB" />
-    <meta http-equiv="Content-Script-Type" content="text/javascript" />
-
-    <meta name="author" content="Harish Narayanan [mail at harishnarayanan dot org]" />
-    <link rel="author" href="https://plus.google.com/photos/+HarishNarayanan" />
-    <meta name="abstract" content="The life and times of a computational scientist and fledgling web entrepreneur." />
-    <meta name="description" content="A website cataloguing the life and times of a computational scientist who has decided to make his way in the world by building delightful web apps." />
-    <meta name="keywords" content="photography, web apps, online education, research, writing, journal, mechanics, biophysics, algorithms, computational science, PhD" />
-    <meta name="distribution" content="global" />
-    <meta name="revisit-after" content="1 days" />
-    <meta name="copyright" content="Copyright (C) 2002--2013 Harish Narayanan" />
-    <meta name="robots" content="follow, index" />
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><!--#echo var="pagetitle" --> &#187; Harish Narayanan, Ph.D.</title>
+    <meta name="author" content="Harish Narayanan [mail at harishnarayanan dot org]">
+    <link rel="author" href="https://plus.google.com/photos/+HarishNarayanan">
+    <meta name="description" content="A website cataloguing the life and times of a computational scientist who has decided to make his way in the world by building delightful web apps.">
+    <meta name="keywords" content="photography, web apps, online education, research, writing, journal, mechanics, biophysics, algorithms, computational science, PhD">
+    <meta name="revisit-after" content="1 days">
+    <meta name="robots" content="follow, index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
 
-    <style type="text/css" title="My very own soft, cuddly style-sheet." media="all">
-      @import "<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/work-two-oh.css";
-    </style>
-
-    <!--[if lte IE 7]>
-    <style type="text/css" media="all">
-      @import "<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/ie-diff.css";
-    </style>
-    <![endif]-->
-<!--#if expr="$includefancy = Yes" -->
-    <script src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/FancyZoom.js" type="text/javascript"></script>
-    <script src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/FancyZoomHTML.js" type="text/javascript"></script>
-<!--#endif -->
-<!--#if expr="$includejquery = Yes" -->
-    <script src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/jquery.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <!--#if expr="$includefancy = Yes" -->
+    <script src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/FancyZoom.js"></script>
+    <script src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/FancyZoomHTML.js"></script>
+    <!--#endif -->
+    <!--#if expr="$includejquery = Yes" -->
+    <script src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/jquery.js"></script>
+    <script>
       $(document).ready(function(){
         $("div.hideable").hide();
         $("a.showhide").click(function () {
         $("div.hideable").slideToggle(400);});
       });
     </script>
-
-<!--#endif -->
-<!--#if expr="$includefeed = Yes" -->
-    <link rel="alternate" href="https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=copingbear" type="application/rss+xml" title="RSS feed for Harish's microjournal" />
-<!--#endif -->
-<!--#if expr="$includesyntaxhighlighter = Yes" -->
-    <script type="text/javascript" src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/sh_main.js"></script>
-    <script type="text/javascript" src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/sh_python.js"></script>
-    <link type="text/css" rel="stylesheet" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/sh_ide-codewarrior.css" />
-<!--#endif -->
-    <link rel="stylesheet" type="text/css" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/print.css" media="print" />
-    <link rel="shortcut icon" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/images/hn-icon.png" />
-    <link rel="icon" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/images/hn-icon.png" />
-    <!--  <link rel="alternate" type="application/rss+xml" title="Site evolution log" href="<!--#echo var="MY_DOCUMENT_ROOT"-->/meta/changelog/rss-log/" /> -->
-<!--#if expr="$includemathjax = Yes" -->
+    <!--#endif -->
+    <!--#if expr="$includefeed = Yes" -->
+    <link rel="alternate" href="https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=copingbear" type="application/rss+xml" title="RSS feed for Harish's microjournal">
+    <!--#endif -->
+    <!--#if expr="$includesyntaxhighlighter = Yes" -->
+    <script src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/sh_main.js"></script>
+    <script src="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/scripts/sh_python.js"></script>
+    <link type="text/css" rel="stylesheet" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/sh_ide-codewarrior.css">
+    <!--#endif -->
+    <link rel="stylesheet" type="text/css" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/print.css" media="print">
+    <link rel="shortcut icon" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/images/hn-icon.png">
+    <link rel="icon" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/layout/images/hn-icon.png">
+    <!--  <link rel="alternate" type="application/rss+xml" title="Site evolution log" href="<!--#echo var="MY_DOCUMENT_ROOT"-->/meta/changelog/rss-log/"> -->
+    <!--#if expr="$includemathjax = Yes" -->
     <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<!--#endif -->
-
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-139341-10']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!--#endif -->
   </head>
 
   <body<!--#if expr="$includefancy = Yes" --> onload="setupZoom();"<!--#endif --><!--#if expr="$includesyntaxhighlighter = Yes" --> onload="sh_highlightDocument();"<!--#endif -->>
 
-    <div id="window">
-      <div id="container">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
