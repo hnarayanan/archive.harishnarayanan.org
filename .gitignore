@@ -1,0 +1,15 @@
+*~
+*.orig
+*.pyc
+*.tmplc
+.DS_Store
+files/*
+logs/*
+mujournal/fetch-twitter.py
+mujournal/gallery.html
+mujournal/tweets.html
+projects/memory_lane
+venv/*
+sitemap.xml
+google*.html
+Bing*.xml
