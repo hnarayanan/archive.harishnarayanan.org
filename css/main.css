@@ -95,7 +95,22 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+    font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+    margin: 0 auto;
+    padding: 0 1.5em;
+    max-width: 48em;
+}
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-weight: 900;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #000;
+}
 
 
 
