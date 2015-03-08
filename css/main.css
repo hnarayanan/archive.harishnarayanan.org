@@ -297,8 +297,9 @@ address {
     font-style: normal;
 }
 
-
-
+ol.writing li {
+    margin-bottom: 1.0em;
+}
 
 
 
