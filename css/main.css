@@ -212,6 +212,7 @@ textarea {
   }
   .navbar-list {
       list-style: none;
+      margin-left: 3.2rem;
   }
   .navbar-item {
       position: relative;
