@@ -1,0 +1,18 @@
+server {
+  listen 80;
+  server_name v4.harishnarayanan.org;
+
+  access_log /home/ubuntu/sites/v4.harishnarayanan.org/logs/nginx/access.log;
+  error_log /home/ubuntu/sites/v4.harishnarayanan.org/logs/nginx/error.log;
+
+  charset utf-8;
+  client_max_body_size 75M;
+
+  location / {
+    ssi on;
+    set $MY_DOCUMENT_ROOT "";
+    gzip_static on;
+    expires max;
+    root /home/ubuntu/sites/v4.harishnarayanan.org;
+  }
+}

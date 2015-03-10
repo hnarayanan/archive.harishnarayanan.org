@@ -3,7 +3,7 @@
 *.pyc
 *.tmplc
 .DS_Store
-files/*
+files
 logs/*
 config/ssl
 mujournal/fetch-twitter.py
