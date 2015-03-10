@@ -1,11 +1,15 @@
-    <nav class="navbar">
+    <header class="container">
+      <nav role="navigation" class="navbar">
         <ul class="navbar-list">
           <li class="navbar-item"><a class="navbar-link <!--#if expr="$navigation = About" -->active<!--#endif -->" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/">About</a></li>
           <li class="navbar-item"><a class="navbar-link <!--#if expr="$navigation = Research" -->active<!--#endif -->" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/research/">Research</a></li>
-	  <li class="navbar-item"><a class="navbar-link <!--#if expr="$navigation = Writing" -->active<!--#endif -->" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/writing/">Writing</a></li>
-<!--	  <li class="navbar-item"><a class="navbar-link <!--#if expr="$navigation = Talks" -->active<!--#endif -->" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/talks/">Talks</a></li>-->
-	  <li class="navbar-item"><a class="navbar-link <!--#if expr="$navigation = Projects" -->active<!--#endif -->" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/projects/">Projects</a></li>
-	  <li class="navbar-item"><a class="navbar-link <!--#if expr="$navigation = Photos" -->active<!--#endif -->" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/photos/">Photos</a></li>
-<!--	  <li class="navbar-item"><a class="navbar-link <!--#if expr="$navigation = muJournal" -->active<!--#endif -->" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/mujournal/">muJournal</a></li>-->
+          <li class="navbar-item"><a class="navbar-link <!--#if expr="$navigation = Writing" -->active<!--#endif -->" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/writing/">Writing</a></li>
+          <li class="navbar-item"><a class="navbar-link <!--#if expr="$navigation = Projects" -->active<!--#endif -->" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/projects/">Projects</a></li>
+          <li class="navbar-item"><a class="navbar-link <!--#if expr="$navigation = Photos" -->active<!--#endif -->" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/photos/">Photos</a></li>
+         <!-- <li class="navbar-item"><a class="navbar-link <!--#if expr="$navigation = Talks" -->active<!--#endif -->" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/talks/">Talks</a></li> -->
+         <!-- <li class="navbar-item"><a class="navbar-link <!--#if expr="$navigation = muJournal" -->active<!--#endif -->" href="<!--#echo var="MY_DOCUMENT_ROOT" -->/mujournal/">muJournal</a></li>-->
         </ul>
-    </nav>
+      </nav>
+    </header>
+
+    <main role="main" class="container" aria-labelledby="title">
