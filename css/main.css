@@ -42,7 +42,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #eee;
     margin: 1em 0;
     padding: 0;
 }
@@ -212,7 +212,7 @@ textarea {
   }
   .navbar-list {
       list-style: none;
-      margin-left: 3.2rem;
+      margin-left: 1.2rem;
   }
   .navbar-item {
       position: relative;
@@ -228,6 +228,13 @@ textarea {
       color: #33C3F0;
   }
 }
+
+@media (min-width: 800px) {
+  .navbar-list {
+      margin-left: 3.2rem;
+  }
+}
+
 
 /*
  * Tables
