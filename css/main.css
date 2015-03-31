@@ -247,7 +247,7 @@ td:last-child {
    ========================================================================== */
 
 body {
-    font-family: "Lora";
+    font-family: "Lora", "Georgia", "Cambria", "Times New Roman", "Times", serif;
     font-weight: 400;
     line-height: 1.6;
     color: #222;
@@ -255,7 +255,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Open Sans Condensed";
+    line-height: 1.2em;
+    font-family: "Open Sans Condensed", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-weight: 700;
     margin-bottom: -0.2em;
 }
