@@ -185,9 +185,8 @@ textarea {
 
 .navbar-link {
     text-transform: uppercase;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .2rem;
+    font-size: 12px;
+    letter-spacing: .15rem;
 }
 
 @media (min-width: 750px) {
